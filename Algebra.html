@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The Fun in Mathematics</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./External CSS/external_css.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./Favicon/favicon-16x16.png">
+    <link rel="manifest" href="./Favicon/site.webmanifest">
+</head>
+<body>
+    <div class="account">
+        <div><button id="login">Login</button></div>
+        <div><button id="signup">Signup</button></div>
+        <div id="welcome"></div><div class="pop" onmouseleave="leavepopup()"><a href="./Account.html"><button id="loginusername"></button></a><span class="popuptext" id="popupmsg">View Account</span></div>
+        <div><a href="./index.html"><button id="logout" onclick="logout()">Logout</button></a></div>
+    </div>
+    <div class="popup" id="popup">
+        <div class="close-btn">&times;</div>
+        <div class="form">
+            <h2>Log In</h2>
+            <div class="formheight">
+                <div class="form-element">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-element">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" placeholder="Enter your password" required>
+                </div>
+                <!-- <div class="form-element">
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me">Remember me</label>
+                </div> -->
+            </div>
+            <div>
+                <div class="form-element">
+                    <div id="login-message">
+
+                    </div>
+                    <button onclick="loginfromlogin()" id="signinbutton">Sign in</button>
+                </div>
+                <div class="form-element">
+                    <a href="javascript:void(0)">Forgot password?</a>
+                </div>
+                <div class="form-element">
+                    <a href="javascript:void(0)" id="signuptext">Don't have an account? Sign up here.</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="signuppopup">
+        <div class="close-btn">&times;</div>
+        <div class="form">
+            <h2>Sign up</h2>
+            <div class="formheight">
+                <div class="form-element">
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" placeholder="Enter your first name" required>
+                </div>
+                <div class="form-element">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastname" placeholder="Enter your last name" required>
+                </div>
+                <div class="form-element">
+                    <label for="username">User Name</label>
+                    <input type="text" id="username" placeholder="Enter your user name" required>
+                </div>
+                <div class="form-element">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-element">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" placeholder="Enter your password" required>
+                </div>
+                <div class="form-element">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+                </div>
+            </div>
+            <div class="form-element">
+                <div id="error-message">
+                    
+                </div>
+                <button onclick="loginfromsignup()" id="signupbutton">Sign up</button>
+            </div>
+        </div>
+    </div>
+    <script src="./Scripts/loginsignup.js"></script>
+    <script src="./Scripts/account.js"></script>
+    <header>
+        <img src="./Media/Nuvola_Math_and_Inf.png" alt="Math Symbols" width="150" height="150"> <h1>The Fun in Mathematics</h1> <img src="./Media/Nuvola_Math_and_Inf.png" alt="Math Symbols" width="150" height="150">
+    </header>
+    <nav class="sticky">
+        <div class="navigation-container">
+            <ul id="navscroll" onscroll="scrolltrack()">
+                <li class="dropdown">
+                    <a href='index.html' class="dropbtn">Home</a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="index.html?scroll=1#backstory" onclick="offset()">Backstory</a>
+                        <a href="index.html?scroll=1#content" onclick="offset()">Content</a>
+                        <a href="index.html?scroll=1#purpose" onclick="offset()">Purpose</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href='History.html' class="dropbtn">History</a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="History.html?scroll=1#prehistoricmaths" onclick="offset()">Prehistoric Maths</a>
+                        <a href="History.html?scroll=1#midcenturymaths" onclick="offset()">Mid Century Maths</a>
+                        <a href="History.html?scroll=1#16thcenturymaths" onclick="offset()">16th Century Onwards Mathematics</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href='Algebra.html' id="active" class="dropbtn">Algebra</a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="Algebra.html?scroll=1#quadraticformula" onclick="offset()">Quadratic Formula</a>
+                        <a href="Algebra.html?scroll=1#eulersidentity" onclick="offset()">Euler's Identity</a>
+                        <a href="Algebra.html?scroll=1#fundamentalalgebra" onclick="offset()">Fundamental Theorum of Algebra</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href='Geometry.html' class="dropbtn">Geometry</a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="Geometry.html?scroll=1#pythagorean" onclick="offset()">Pythagorean Theorum</a>
+                        <a href="Geometry.html?scroll=1#heron" onclick="offset()">Heron's Formula</a>
+                        <a href="Geometry.html?scroll=1#surfacearea" onclick="offset()">Surface Area &amp; Volume of a Sphere</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href='Trigonometry.html' class="dropbtn">Trigonometry</a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="Trigonometry.html?scroll=1#trigonometricidentity" onclick="offset()">Famous Trigonometric Identity</a>
+                        <a href="Trigonometry.html?scroll=1#sineandcosinerule" onclick="offset()">Sine &amp; Cosine Rule</a>
+                        <a href="Trigonometry.html?scroll=1#theunitcircle" onclick="offset()">The Unit Circle</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href='Calculus.html' class="dropbtn">Calculus</a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="Calculus.html?scroll=1#differentiation" onclick="offset()">Differentiation &amp; Integration</a>
+                        <a href="Calculus.html?scroll=1#taylor" onclick="offset()">Taylor Series</a>
+                        <a href="Calculus.html?scroll=1#lhopitalsrule" onclick="offset()">L'H&ocirc;pital's Rule</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href='NumberTheory.html' class="dropbtn"><nobr>Number Theory</nobr></a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="NumberTheory.html?scroll=1#divisibilityrules" onclick="offset()">Divisibility Rules</a>
+                        <a href="NumberTheory.html?scroll=1#primenumbers" onclick="offset()">Prime Numbers</a>
+                        <a href="NumberTheory.html?scroll=1#numberofzeros" onclick="offset()">Number of Zero's</a>
+                        <a href="NumberTheory.html?scroll=1#numberoffactors" onclick="offset()">Number of Factors</a>
+                    </div>
+                </li>
+                <li><a href='Community.html'>Community</a></li>
+                <li><a href='Quizzes.html'>Quizzes</a></li>
+            </ul>
+        </div>
+        <script src="./Scripts/Scrollwheeltrack.js" defer></script>
+    </nav>
+    <div class="wrapper">
+    <aside>
+        <!--About author, Fun facts and additional knowledge -->
+        <div class="asidesection">
+            <h3 class="asideheader"><b>Author</b></h3>
+            <p>Hi there. I am a student from Sunway University and I made this website as an assignment for Web Fundamentals.
+            This is basically my <em>first time</em> coding in <code>HTML</code> language and I am still learning the basics, so 
+            if there is anything that I can improve on, <strong>be sure</strong> to give suggestions&excl; <span id="dots">...... </span>
+            </p>
+            <div id="more">
+                <p>Back when I was young, I always had a <em>massive</em> interest in Mathematics, it seemed like everything in the world
+                had to do with the laws of Mathematics. That idea intrigued me so I wanted to know more about the <em>deep</em> secrets of the universe.
+                Thanks to my mother, I always had a good number sense and it <em>tremendously</em> helped me a lot in problem solving.
+                </p>
+                <p>Mathematics is unanimously known as the <strong>most</strong> hated subject among students because of the tiring calculations. I wish
+                to change that negative perspective towards Mathematics by talking about the fun within Mathematics, which include the reasons why I 
+                love the subject.
+                </p>
+            </div>
+            <button onclick="readmore()" id="readmore-btn">Read More</button>
+        </div>
+        <script src="./Scripts/Readmore-readless.js"></script>
+        <div class="funfact">
+            <h3 class="asideheader"><b>Fun facts</b></h3>
+            <p>To find out the volume of the cylindrical shape of a pizza, the formula used is Pi &lowast; r<sup>2</sup> &lowast; h. So, if an ordinary pizza has a radius of 'z' 
+            and height 'a', its volume is Pi &lowast; z &lowast; z &lowast; a which makes up 'pizza'&excl;
+            </p>
+        </div>
+    </aside>
+    <main>
+        <!--Main text-->
+        <div>
+            <h2>Algebra</h2>
+            <p>Now that the boring history part is over, we will get to the more interesting part about maths. In this part about algebra, I will share some of the
+            equations, facts, theorums that I find intriguing. But first, <em>What is algebra?</em>, algebra is a branch of mathematics dealing with <strong>symbols</strong> and the 
+            rules for <strong>manipulating</strong> those symbols. 
+            </p>
+            <div class="quote">
+            <blockquote><cite>
+                "Mathematics may not teach us to add love or subtract hate, but it gives us hope that every problem has a solution." <br> &mdash; Anonymous
+            </cite></blockquote>
+            </div>
+        </div>
+        <div>
+            <ol>
+                <li class="mainordered"><h3 id="quadraticformula">Quadratic Formula</h3></li>
+                <p>One of the very <em>first</em> formulas that students will learn when they come across solving equations where the largest exponent of the unknown variable 
+                is 2. When I first learned this, I was so curious how the formula was derived because it looked nothing like the original equation.
+                </p>
+                <p>The standard form of a quadratic equation looks like this: <var>ax<sup>2</sup>+bx+c=0</var>, where <var>a &ne; 0 </var> <br>
+                The entire derivation involves the <em>"Completing the Square"</em> method and some basic term manipulation, as seen in the <em>figure</em>:
+                <figure>
+                    <img src='./Media/Quadratic.png' alt="Quadratic Formula" width="300" height="auto"> <hr>
+                    <figcaption>Fig3.1 Proof of the Quadratic Formula</figcaption>
+                </figure>
+                </p>
+                <p>As you can see in the solution, the <var>&plusmn;</var> term means that is potentially <strong>two</strong> solutions to the original equation. This can be visually
+                seen when it is plotted in a <em>Cartesian plane</em>, in this case it is a <strong>parabola</strong>. The intersection between the parabola and the x-axis 
+                will be the solutions to the equation. But, there are other parabolas that only intersect once with the x-axis, or even no intersection at all, this means that 
+                there could be either 2, 1 or 0 <em>real</em> solutions to the quadratic equation. We can deduce this by computing its discriminant <var>b<sup>2</sup>&minus;4ac</var>.
+                </p>
+                <div class="fig">
+                <figure>
+                    <img src='./Media/Parabola.png' alt="Parabola" width="300" height="auto"> <hr>
+                    <figcaption>Fig3.2 An Example of Parabola</figcaption>
+                </figure>
+                <figure>
+                    <img src='./Media/Roots.png' alt="Roots" width="300" height="auto"> <hr>
+                    <figcaption>Fig3.3 Different Number of Roots</figcaption>
+                </figure>
+                </div>
+                <p>What about other numbers of degree? What is a meaning of a <em>real</em> solution? We will cover this topic in a later section.</p>
+                <li class="mainordered"><h3 id="eulersidentity">Euler's Identity</h3></li>
+                <figure style="float:right">
+                    <img src='./Media/Euler.png' alt="Euler's Identity" width="300" height="auto"> <hr>
+                    <figcaption>Fig3.4 Euler's Identity</figcaption>
+                </figure>
+                <p>This identity is known as <em>The most beautiful equation in maths</em>, it uses many different kinds of numbers, put into an equation and some how it <strong>works</strong>. 
+                The <em>special</em> numbers in this equation are <var>e, &pi;, i</var>: 
+                </p>
+                <p style="clear:right">The most formal proof for the equation is using the taylor series of <var>e, sin, cos</var>, but I will talk about other beautiful 
+                proofs. One of them is visualizing how the function <var>e<sup>t</sup></var> grows, a special property about <var>e<sup>t</sup></var> 
+                is that its rate of change is exactly itself. In other words, the <em>derivative</em> of <var>e<sup>t</sup></var> is <var>e<sup>t</sup></var>. 
+                </p><br>
+                <p>When the exponent is not just <var>t</var>, instead it is <var>3t</var>, we can also find the growth of that function. The derivative 
+                of <var>e<sup>3t</sup></var> is <var>3e<sup>3t</sup></var> by using the <em>chain rule</em>. This means that the functions grows 3 times faster as before.
+                It will become clearer as you interpret its position and velocity in a number line.
+                </p>
+                <div class="fig">
+                <figure>
+                    <a href="https://www.youtube.com/watch?v=v0YEaeIClKY" target="_blank"><img src='./Media/Growth.png' alt="Position and Velocity" width="300" height="auto"></a> <hr>
+                    <figcaption><a href="https://www.youtube.com/watch?v=v0YEaeIClKY" target="_blank" class="maintexthover">Fig3.5 The Position and Velocity of <var>e<sup>2t</sup></var></a></figcaption>
+                </figure>
+                </div>
+                <p>So what if the exponent is not a real number, what if it is <var>i</var>? When dealing with imaginary numbers, specifically when you 
+                multiple something by <var>i</var>, you actually are rotating it by 90&#176; in the <em>complex plane</em>. So the velocity of each position is perpendicular to the position itself. 
+                You can interpret <var>e<sup>it</sup></var> as rotating around a circle with radius 1 at a speed of 1 unit per second.
+                </p><br>
+                <p>So when you plug in &pi; into <var>t</var>, it means that it rotated &pi; seconds from its starting position. In terms of radian, &pi; radians is actually 180&#176;
+                So you basically rotated for half a circle, landing at (-1,0<var>i</var>) in the complex plane, giving us the final solution of the euler's identity.
+                </p>
+                <div class="fig">
+                <figure>
+                    <a href="https://www.youtube.com/watch?v=v0YEaeIClKY" target="_blank"><img src='./Media/Solution.png' alt="Euler's Identity Proved" width="300" height="auto"></a> <hr>
+                    <figcaption><a href="https://www.youtube.com/watch?v=v0YEaeIClKY" target="_blank" class="maintexthover">Fig3.6 Euler's Identity Proved</a></figcaption>
+                </figure>
+                </div>
+                <summary><em>Click on the figures to learn more.</em></summary> <br>
+                <li class="mainordered"><h3 id="fundamentalalgebra">Fundamental Theorum of Algebra</h3></li>
+                <p>Theorum of equations proved by <em>Carl Friedrich Gauss</em> in 1799. It states that every polynomial equation of <strong>degree n</strong> with complex number coefficients <strong>has n roots</strong>, 
+                or solutions, in the complex numbers. For example, the equation <var>ax<sup>3</sup>+bx<sup>2</sup>+cx+d=0</var> has exactly 3 roots including real and complex roots. I will not be talking about the proof 
+                for this as it is too complicated but click <a href="https://www.math.ucdavis.edu/~anne/WQ2007/mat67-Ld-FTA.pdf" target="_blank" class="maintexthover"><em>here</em></a> to learn more.
+                </p>
+                <figure style="float:left">
+                    <img src='./Media/Fundamental.png' alt="Fundamental Theorum of Algebra" width="300" height="auto"> <hr>
+                    <figcaption>Fig3.7 Fundamental Theorum of Algebra</figcaption>
+                </figure>
+                <br><p>Also it is important to know that if there are complex roots, it will always <strong>come in pairs</strong>, meaning they will be <em>conjugates</em> of each other. 
+                It is because when you compute the sum of roots or the product of roots to find out the coefficients of the equation, the <em>imaginary</em> part will always cancel out leaving 
+                only the <em>real</em> part.
+                </p>
+                <p style="clear:left">Let's do an example using the quadratic formula discussed before. The equation we want to solve is <var>5x<sup>2</sup>+4x+1=0</var>,
+                you may notice that its parabola does not have any intersections with the x-axis, it is because the determinant is less than one, meaning it has no real solutions.
+                We can still use the quadratic formula to find the roots, but in this case it will be <em>complex roots</em>.
+                </p>
+                <div style="width:100%">
+                    <figure style="float:left;">
+                        <img src='./Media/Equation.png' alt="Solution for equation" width="300" height="auto"> <hr>
+                        <figcaption>Fig3.8 Solution for the Example Equation</figcaption>
+                    </figure>
+                    <div style="max-width: fit-content;">
+                        <div>
+                            <figure>
+                                <img src='./Media/Factor.png' alt="Factorization of equation" width="300" height="auto"> <hr>
+                                <figcaption>Fig3.9 Factorization for the Example Equation</figcaption>
+                            </figure>
+                            <p>Additionally, this means that we can factorize any polynomial of any degree&excl; Some factors will just include imaginary parts, how cool is that&excl;</p>
+                        </div>
+                    </div>
+                </div>
+            </ol>
+        </div>
+        <a href='Algebra.html'><button type="button" class="backtotopbutton">Back to Top</button></a>
+    </main>
+    </div>
+    <footer>
+        <!--Sources, credits and copyright-->
+        <table class="footertable">
+            <tr>
+                <td class="footersection">
+                    <h3>Contact me</h3><br>
+                    <a href='https://www.facebook.com/profile.php?id=100005811885824' target="_blank"><img src='./Media/Facebook.png' alt="Facebook" width="50" height="50"  class="footerimg" title="Facebook"></a>
+                    <a href="https://www.instagram.com/brianlee305/?hl=en" target="_blank"><img src='./Media/Instagram.png' alt='Instagram' width="50" height="50" class="footerimg" title="Instagram"></a>
+                    <a href="https://twitter.com/sSuperRr1" target="_blank"><img src='./Media/Twitter.png' alt="Twitter" width="50" height="50" class="footerimg" title="Twitter"></a>
+                    <a href="https://www.youtube.com/channel/UCMUdpRzituT42vZZEcRmmZA" target="_blank"><img src='./Media/Youtube.png' alt="Youtube" width="50" height="50" class="footerimg" title="Youtube"></a>
+                </td>
+                <td class="footersection">
+                    <h3>Or email me </h3><br>
+                    <a href="mailto:minecraft2013brian@gmail.com" class="footertext"><b id="emailme">here</b></a>
+                </td>
+                <td class="footersection">
+                    <h3>Sources used:</h3>
+                    <cite><ol>
+                        <li>None</li>
+                    </ol></cite>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <h4>Disclaimer:</h4>
+                    Information included in this website may or may not be accurate as the information listed is what the author intepreted from multiple sources and websites. 
+                    User dicretion is adviced. <br><br>
+                    <small>&copy; Copyright 2022 The Fun In Mathematics. All rights reserved.</small>
+                </td>
+            </tr>
+        </table>
+    </footer>
+</body>
+</html>

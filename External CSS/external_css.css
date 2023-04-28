@@ -1,0 +1,691 @@
+header{
+        background: #0000FF;
+        background: -moz-linear-gradient(left, #0000FF 0%, #6EC8FF 50%, #0000FF 100%);
+        background: -webkit-linear-gradient(left, #0000FF 0%, #6EC8FF 50%, #0000FF 100%);
+        background: linear-gradient(to right, #0000FF 0%, #6EC8FF 50%, #0000FF 100%);
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 23px;
+}
+
+header img{
+        display:inline-block;
+        padding:10px
+}
+
+header h1{
+        display:inline-block;
+        text-shadow:3px 3px 5px lightgray;
+        color:aliceblue;
+        font-size: 50px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-style: italic;
+        padding: 0px 25px;
+        text-align: center;
+}
+
+body{
+        background: #F9D5A5;
+        background: -moz-linear-gradient(top, #F9D5A5 0%, #BE7D1D 100%);
+        background: -webkit-linear-gradient(top, #F9D5A5 0%, #BE7D1D 100%);
+        background: linear-gradient(to bottom, #F9D5A5 0%, #BE7D1D 100%);
+        margin:0px;
+        padding:0px;
+        text-align: justify;
+}
+
+nav{
+        background-color: aqua;
+}
+
+.navigation-container{
+        max-width: fit-content;
+        margin: 0 auto;
+}
+
+nav ul{
+        width:100%;
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+        /* background-color: aqua; */
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        box-sizing: border-box;
+}
+
+nav li{
+        float: left;
+        display: inline;
+        margin: 0px;
+        font-size: 25px;
+        font-weight: bold;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav li a,
+.dropbtn{
+        transition: all 0.2s;
+        display: inline-block;
+        color:white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+}
+
+.dropdown{
+        display: inline-block;
+}
+
+.dropdown-menu{
+        display: none;
+        position: absolute;
+        top: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0px 2px 10px rgba(0,0,0,.2);
+        background-color: #6EC8FF;
+        z-index: 1;
+        font-size: 15px;
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out, display 0.2s ease-in-out;
+}
+
+.dropdown-menu a{
+        color:aliceblue;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+}
+
+.dropdown-menu a:hover {
+        background-color: #6EC8FF;
+}
+
+.dropdown:hover .dropdown-menu{
+        display: block;
+        opacity: 1;
+}
+
+nav li a:link{
+        color:aliceblue;
+}
+
+nav li a:hover,
+.dropdown:hover .dropbtn{
+        color:lightblue;
+        background-color: white;
+}
+
+#active{
+        margin: 0px;
+        transition: all 0.2s;
+        font-size: 25px;
+        font-weight:bold;
+        color:white;
+        background-color: darkcyan;
+
+}
+
+aside{
+        padding-left: 20px;
+        padding-right: 20px;
+        float:left;
+        height:100%;
+        background-color:cadetblue;
+}
+
+.wrapper{
+        display: grid;
+        grid-template-columns: 230px auto;
+}
+
+footer{
+        clear:both;
+        display:flex;
+        flex-wrap: nowrap;
+        background: rgb(169,169,169);
+        background: radial-gradient(circle, rgba(169,169,169,1) 0%, rgba(47,79,79,1) 100%);
+}
+
+.sticky{
+        position:sticky;
+        top: -1px;
+        z-index: 10;
+}
+
+.backtotopbutton{
+        z-index: 100;
+        background-color: #aaa;
+        border-radius: 10px;
+        margin-bottom: 5px;
+        transition: all 0.2s;
+        size: 30px;
+        padding: 10px;
+        position: fixed;
+        right: 10px;
+        bottom: 5px;
+}
+
+.backtotopbutton:hover{
+        color:white;
+        background-color: black;
+        cursor: pointer;
+}
+
+.footersection{
+        width: 33%;
+        text-align: center;
+}
+
+.footersection ol{
+        margin-right: 3%;
+}
+
+.footertable{
+        margin:auto;
+        margin-bottom: 30px;
+}
+
+footer h3{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-weight: bold;
+        font-size: 25px;
+        text-shadow:2px 2px 4px lightgray;
+}
+
+footer li{
+        font-family: 'Times New Roman', Times, serif;
+        text-align: left;
+}
+
+.footerimg{
+        margin: 10px;
+        transition: all 0.2s;
+}
+
+.footerimg:hover{
+        outline: 2px solid black;
+        background-color: lightgray;
+        border-radius: 10px;
+}
+
+.footertext{
+        text-decoration: none;
+        color:aliceblue;
+}
+
+.footertext:hover{
+        border-bottom: 2px solid black;
+        color:white;
+}
+
+#emailme{
+        font-size: 40px;
+}
+
+main{
+        padding-left: 20px;
+        padding-right: 20px;
+        border: 5px inset orange;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 20px;
+        overflow: hidden;
+}
+
+main ol{
+        padding-left: 0;
+}
+
+main h2{
+        font-size: 30px;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+}
+
+main li h3{
+        display: inline;
+}
+
+main h3{
+        text-shadow: grey 3px 5px 2px;
+}
+
+main a{
+        text-decoration: none;
+        color:rgb(47,79,79)
+}
+
+.maintexthover:hover{
+        transition: all 0.2s;
+        border-bottom: 3px solid black;
+        color:antiquewhite
+}
+
+main img{
+        background-color: antiquewhite;
+        transition: all 0.2s;
+        max-width: 500px;
+        width: 100%;
+}
+
+
+main a img:hover{
+        outline: 5px inset red;
+}
+
+main ul li {
+        list-style-type: disc;
+        position: relative;
+        padding: 3px 0 2px 25px;
+}
+
+.mainordered{
+        list-style-type: none;
+        counter-increment: item;
+}
+
+.mainordered::before {
+        content: counter(item);
+        margin-right: 5px;
+        font-size: 150%;
+        background-color: #7eb4e2;
+        color: #f9dd94;
+        font-weight: bold;
+        padding: 3px 8px;
+        border-radius: 3px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.quote{
+        margin:0;
+        border-top: 3px solid #BE7D1D;
+        border-bottom: 3px solid #BE7D1D;
+        background-color: #F9D5A5;
+}
+
+.asidesection{
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+.asideheader{
+        font-size: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+.funfact{
+        margin-top: 20px;
+        border:2px solid darkcyan;
+        border-radius: 10px;
+        background-color: #6EC8FF;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+        padding: 5px;
+}
+
+figure{
+        display: inline-block;
+}
+
+figcaption{
+        text-align: center;
+}
+
+.homeul{
+        list-style-type: none;
+}
+
+.homeli{
+        display: inline-block;
+        width: 350px;
+        padding-bottom: 10px;
+        margin: 10px;
+        text-align: center;
+        font-family: Georgia,serif;
+}
+
+.fig{
+        text-align: center;
+}
+
+.trig{
+        text-align: center;
+        background-color: white;
+}
+
+.numbertheory{
+        text-align: center;
+}
+
+aside button{
+        outline: none;
+        padding: 10px 15px;
+        font-weight: bolder;
+        background-color: #aaa;
+        border-radius: 10px;
+        transition: all 0.2s;
+}
+
+aside button:hover{
+        color:white;
+        background-color: black;
+        cursor: pointer;
+}
+
+#more{
+        display: none;
+}
+
+.specialfixedwidth{
+        max-width: 500px;
+}
+
+.account{
+        display: flex;
+        gap: 10px;
+        position: absolute;
+        top: 0;
+        right: 0px;
+}
+
+#loginusername{
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        max-width: 500px;
+}
+
+.account button:hover{
+        color: gray;
+        text-shadow:black 1px 3px 2px;
+}
+        
+.account button,
+#welcome{
+        border: none;
+        background-color: rgba(0,0,0,0);
+        color: white;
+        font-size: 28px;
+        font-weight: 550;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        cursor: pointer;
+        text-shadow: gray 1px 3px 2px;
+}
+
+#welcome{
+        cursor:default;
+}
+
+.popup,
+.signuppopup,
+.accountdetails{
+        box-sizing: border-box;
+        z-index: 200;
+        background-color: white;
+        position: fixed;
+        top: -150%;
+        left: 50%;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+        width: 380px;
+        padding: 20px 30px;
+        outline: 1px solid black;
+        box-shadow: 2px 2px 5px 5px rgba(0,0,0,.2);
+        border-radius: 10px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        transition: top 0s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.popup.active,
+.signuppopup.active,
+.accountdetails.active{
+        top: 50%;
+        opacity: 1;
+        transform: translate(-50%, -50%);
+        transition: top 0s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.popup .close-btn,
+.signuppopup .close-btn,
+.accountdetails .close-btn{
+        display: flex;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 15px;
+        height: 15px;
+        background: #888;
+        color: #eee;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        cursor: pointer;
+}
+
+.popup .form h2,
+.signuppopup .form h2{
+        font-weight: bold;
+        text-align: center;
+        margin: 10px 0px 20px;
+}
+
+.popup .form .form-element,
+.signuppopup .form .form-element{
+        margin: 15px 0px;
+}
+
+.popup .form .form-element label,
+.signuppopup .form .form-element label{
+        font-size: 20px;
+        color: #222;
+}
+
+.popup .form .form-element input[type="text"],
+.popup .form .form-element input[type="password"],
+.popup .form .form-element input[type="email"],
+.signuppopup .form .form-element input[type="text"],
+.signuppopup .form .form-element input[type="password"],
+.signuppopup .form .form-element input[type="email"]{
+        margin-top: 5px;
+        display: block;
+        width: 90%;
+        padding: 10px;
+        border: 2px solid #aaa;
+        outline: none;
+}
+
+.popup .form .form-element button,
+.signuppopup .form .form-element button{
+        width: 100%;
+        outline: none;
+        border-radius: 8px;
+        background-color: #222;
+        color: #f5f5f5;
+        height: 40px;
+        font-size: 15px;
+        cursor: pointer;
+}
+
+.popup .form .form-element a,
+.signuppopup .form .form-element a{
+        text-decoration: none;
+        display: block;
+        text-align: right;
+        font-size: 16px;
+        color: #1a79ca;
+        font-weight: bold;
+}
+
+.pop .popuptext{
+        visibility: hidden;
+        width: 160px;
+        background-color: white;
+        color: #222;
+        font-weight: bold;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-align: center;
+        text-shadow: #999 1px 3px 2px;
+        box-shadow: 2px 2px 5px 5px rgba(0,0,0,.2);
+        border-radius: 6px;
+        padding: 8px 0;
+        position: absolute;
+        z-index: 1000;
+        top: 125%;
+        left: 50%;
+        margin-left: -80px;
+        cursor: default;
+}
+
+.pop .popuptext::after {
+        content: "";
+        position: absolute;
+        bottom: 100%;
+        left: 70%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: white transparent transparent transparent;
+}
+
+.pop .show{
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s;
+}
+
+@-webkit-keyframes fadeIn{
+        from {opacity: 0;} 
+        to {opacity: 1;}
+}
+      
+@keyframes fadeIn{
+        from {opacity: 0;}
+        to {opacity:1 ;}
+}
+
+#signupbutton{
+        margin-top: 8px;
+        margin-bottom: -20px;
+}
+
+#error-message{
+        color: darkred;
+}
+
+@media screen and (max-width: 1345px){
+        .dropdown-menu{
+                transform: translateY(-17px);
+        }        
+}
+
+@media screen and (max-width: 732px){
+        header img{
+                display: none;
+        }
+        
+        header{
+                overflow: hidden;
+        }
+        
+        aside{
+                display: block;
+        }
+
+        .funfact,
+        aside button{
+                margin-bottom: 10px;
+        }
+
+        .wrapper{
+                display: block;
+                margin: 0;
+        }
+
+        .homeul{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                flex-basis: 50%;
+                margin:0;
+                padding:0;
+        }
+}
+
+@media screen and (max-height: 650px){
+        .signuppopup.active{
+                height: 99%;
+                bottom: 10px;
+        }
+
+        .signuppopup .form{
+                height: 100%;
+                display: flex;
+                flex-direction: column;    
+        }
+
+        .signuppopup .formheight{
+                height: 100%;
+                overflow: auto;
+                display: flex;
+                flex-direction: column;
+                overflow-y: auto;
+        }   
+}
+
+@media screen and (max-width: 660px){
+        table{
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                width: 90%;
+                margin: 0 auto;
+                justify-content: center;
+                align-items: center;
+        }
+
+        tr{
+                flex: 1 0 300px;
+                display: block;
+        }
+
+        td{
+                display: block;
+                min-width: 90%;
+                margin: auto;
+        }
+}
+
+@media screen and (max-height: 390px){
+        #popup.active{
+                height: 99%;
+                bottom: 10px;
+        }
+
+        #popup .form{
+                height: 100%;
+                display: flex;
+                flex-direction: column;    
+        }
+
+        #popup .formheight{
+                height: 100%;
+                overflow: auto;
+                display: flex;
+                flex-direction: column;
+                overflow-y: auto;
+        }
+}
+
+@media screen and (max-width: 365px){
+        .account button,
+        #welcome,
+        #logout{
+                font-size: 25px;
+        }
+
+        .account{
+                right: 4px;
+        }
+}

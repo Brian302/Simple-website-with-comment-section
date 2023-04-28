@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The Fun in Mathematics</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./External CSS/external_css.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./Favicon/favicon-16x16.png">
+    <link rel="manifest" href="./Favicon/site.webmanifest">
+</head>
+<body>
+    <div class="account">
+        <div><button id="login">Login</button></div>
+        <div><button id="signup">Signup</button></div>
+        <div id="welcome"></div><div class="pop" onmouseleave="leavepopup()"><a href="./Account.html"><button id="loginusername"></button></a><span class="popuptext" id="popupmsg">View Account</span></div>
+        <div><a href="./index.html"><button id="logout" onclick="logout()">Logout</button></a></div>
+    </div>
+    <div class="popup" id="popup">
+        <div class="close-btn">&times;</div>
+        <div class="form">
+            <h2>Log In</h2>
+            <div class="formheight">
+                <div class="form-element">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-element">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" placeholder="Enter your password" required>
+                </div>
+                <!-- <div class="form-element">
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me">Remember me</label>
+                </div> -->
+            </div>
+            <div>
+                <div class="form-element">
+                    <div id="login-message">
+
+                    </div>
+                    <button onclick="loginfromlogin()" id="signinbutton">Sign in</button>
+                </div>
+                <div class="form-element">
+                    <a href="javascript:void(0)">Forgot password?</a>
+                </div>
+                <div class="form-element">
+                    <a href="javascript:void(0)" id="signuptext">Don't have an account? Sign up here.</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="signuppopup">
+        <div class="close-btn">&times;</div>
+        <div class="form">
+            <h2>Sign up</h2>
+            <div class="formheight">
+                <div class="form-element">
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" placeholder="Enter your first name" required>
+                </div>
+                <div class="form-element">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastname" placeholder="Enter your last name" required>
+                </div>
+                <div class="form-element">
+                    <label for="username">User Name</label>
+                    <input type="text" id="username" placeholder="Enter your user name" required>
+                </div>
+                <div class="form-element">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-element">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" placeholder="Enter your password" required>
+                </div>
+                <div class="form-element">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+                </div>
+            </div>
+            <div class="form-element">
+                <div id="error-message">
+                    
+                </div>
+                <button onclick="loginfromsignup()" id="signupbutton">Sign up</button>
+            </div>
+        </div>
+    </div>
+    <script src="./Scripts/loginsignup.js"></script>
+    <script src="./Scripts/account.js"></script>
+    <header>
+        <img src="./Media/Nuvola_Math_and_Inf.png" alt="Math Symbols" width="150" height="150"> <h1>The Fun in Mathematics</h1> <img src="./Media/Nuvola_Math_and_Inf.png" alt="Math Symbols" width="150" height="150">
+    </header>
+    <nav class="sticky">
+        <div class="navigation-container">
+            <ul id="navscroll" onscroll="scrolltrack()">
+                <li class="dropdown">
+                    <a href='index.html' class="dropbtn">Home</a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="index.html?scroll=1#backstory" onclick="offset()">Backstory</a>
+                        <a href="index.html?scroll=1#content" onclick="offset()">Content</a>
+                        <a href="index.html?scroll=1#purpose" onclick="offset()">Purpose</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href='History.html' class="dropbtn">History</a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="History.html?scroll=1#prehistoricmaths" onclick="offset()">Prehistoric Maths</a>
+                        <a href="History.html?scroll=1#midcenturymaths" onclick="offset()">Mid Century Maths</a>
+                        <a href="History.html?scroll=1#16thcenturymaths" onclick="offset()">16th Century Onwards Mathematics</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href='Algebra.html' class="dropbtn">Algebra</a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="Algebra.html?scroll=1#quadraticformula" onclick="offset()">Quadratic Formula</a>
+                        <a href="Algebra.html?scroll=1#eulersidentity" onclick="offset()">Euler's Identity</a>
+                        <a href="Algebra.html?scroll=1#fundamentalalgebra" onclick="offset()">Fundamental Theorum of Algebra</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href='Geometry.html' id="active" class="dropbtn">Geometry</a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="Geometry.html?scroll=1#pythagorean" onclick="offset()">Pythagorean Theorum</a>
+                        <a href="Geometry.html?scroll=1#heron" onclick="offset()">Heron's Formula</a>
+                        <a href="Geometry.html?scroll=1#surfacearea" onclick="offset()">Surface Area &amp; Volume of a Sphere</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href='Trigonometry.html' class="dropbtn">Trigonometry</a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="Trigonometry.html?scroll=1#trigonometricidentity" onclick="offset()">Famous Trigonometric Identity</a>
+                        <a href="Trigonometry.html?scroll=1#sineandcosinerule" onclick="offset()">Sine &amp; Cosine Rule</a>
+                        <a href="Trigonometry.html?scroll=1#theunitcircle" onclick="offset()">The Unit Circle</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href='Calculus.html' class="dropbtn">Calculus</a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="Calculus.html?scroll=1#differentiation" onclick="offset()">Differentiation &amp; Integration</a>
+                        <a href="Calculus.html?scroll=1#taylor" onclick="offset()">Taylor Series</a>
+                        <a href="Calculus.html?scroll=1#lhopitalsrule" onclick="offset()">L'H&ocirc;pital's Rule</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href='NumberTheory.html' class="dropbtn"><nobr>Number Theory</nobr></a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="NumberTheory.html?scroll=1#divisibilityrules" onclick="offset()">Divisibility Rules</a>
+                        <a href="NumberTheory.html?scroll=1#primenumbers" onclick="offset()">Prime Numbers</a>
+                        <a href="NumberTheory.html?scroll=1#numberofzeros" onclick="offset()">Number of Zero's</a>
+                        <a href="NumberTheory.html?scroll=1#numberoffactors" onclick="offset()">Number of Factors</a>
+                    </div>
+                </li>
+                <li><a href='Community.html'>Community</a></li>
+                <li><a href='Quizzes.html'>Quizzes</a></li>
+            </ul>
+        </div>
+        <script src="./Scripts/Scrollwheeltrack.js" defer></script>
+    </nav>
+    <div class="wrapper">
+    <aside>
+        <!--About author, Fun facts and additional knowledge -->
+        <div class="asidesection">
+            <h3 class="asideheader"><b>Author</b></h3>
+            <p>Hi there. I am a student from Sunway University and I made this website as an assignment for Web Fundamentals.
+            This is basically my <em>first time</em> coding in <code>HTML</code> language and I am still learning the basics, so 
+            if there is anything that I can improve on, <strong>be sure</strong> to give suggestions&excl; <span id="dots">...... </span>
+            </p>
+            <div id="more">
+                <p>Back when I was young, I always had a <em>massive</em> interest in Mathematics, it seemed like everything in the world
+                had to do with the laws of Mathematics. That idea intrigued me so I wanted to know more about the <em>deep</em> secrets of the universe.
+                Thanks to my mother, I always had a good number sense and it <em>tremendously</em> helped me a lot in problem solving.
+                </p>
+                <p>Mathematics is unanimously known as the <strong>most</strong> hated subject among students because of the tiring calculations. I wish
+                to change that negative perspective towards Mathematics by talking about the fun within Mathematics, which include the reasons why I 
+                love the subject.
+                </p>
+            </div>
+            <button onclick="readmore()" id="readmore-btn">Read More</button>
+        </div>
+        <script src="./Scripts/Readmore-readless.js"></script>
+        <div class="funfact">
+            <h3 class="asideheader"><b>Fun facts</b></h3>
+            <p>If you shuffle a deck of cards properly, it's more than likely that the exact order of the cards you get has <strong>never</strong> been seen before in the 
+                whole history of the universe&excl;
+            </p>
+        </div>
+    </aside>
+    <main>
+        <!--Main text-->
+        <div>
+            <h2>Geometry</h2>
+            <p>Geometry is another fun topic that I will cover, because you can actually <strong>visualize</strong> what is going on instead of using symbols to work out 
+            the solution. In precise terms, Geometry is a branch of mathematics that studies the <strong>sizes, shapes, positions angles and dimensions of things</strong>. 
+            </p>
+            <div>
+            <ol>
+                <li class="mainordered"><h3 id="pythagorean">Pythagorean Theorum</h3></li>
+                <p>When you get into geometry, especially triangles, you will definitely come across the pythagorean theorum. This theorum states that for every right triangle, 
+                <Strong>the sum of the shorter sides squared is equal to the hypotenuse squared</Strong>. This simple theorum is probably one of my <em>favourites</em> because 
+                there are so many elegants proofs for it. I will talk about two proofs that only uses simple maths.
+                </p>
+                <ul>
+                    <li><b>Proof by Arrangement</b></li>
+                    <p>Start by constructing four right triangles with side lengths of <var>a,b,c</var>. We can arrange those four right triangles in two <strong>different</strong> 
+                    ways as shown in the <em>figure</em>. Notice that in the left figure, it forms two squares of side lengths <var>a,b</var>, while in the 
+                    right figure, it forms one single square with side length <var>c</var>. Finally, we can see that for both figures, the entire area of the big square is 
+                    <var>(a+b)<sup>2</sup></var>. So when we discard the original four right triangles that we constructed, we know that the area will still remain the same, 
+                    which means we will get <var>a<sup>2</sup>+b<sup>2</sup>=<var>c<sup>2</sup></var>&excl;
+                    </p>
+                    <div class="fig">
+                    <figure>
+                        <img src='./Media/Pythagorean1.png' alt="Pythagorean Theorum Proof 1" width="300" height="auto"> <hr>
+                        <figcaption>Fig4.1 Proof 1 of Pythagorean Theorum</figcaption>
+                    </figure>
+                    </div>
+                    <li><b>Proof by Similar Triangles</b></li>
+                    <p>Before we start proving, we need to know about the properties of <em>similar triangles</em>, which says that if two triangles have the same angles, the 
+                    <strong>corresponding sides will have the same ratio</strong>. Firstly, we construct a right triangle with points <var>A,B,C,D</var> as shown in the <em>figure</em>, 
+                    note that the three right triangles that are within the main triangle are all <strong>similar</strong>. Using the ratio of sides, we can get two equations as shown 
+                    in the <em>figure</em>.
+                    </p>
+                    <div class="fig">
+                    <figure>
+                        <img src='./Media/Pythagorean2.png' alt="Pythagorean Theorum Proof 2" height="auto" style="max-width:500px"><img src='./Media/Pythagorean3.png' alt="Furthur Calculations" height="auto" style="max-width:500px"> <hr>
+                        <figcaption>Fig4.2 Proof 2 of Pythagorean Theorum</figcaption>
+                    </figure>
+                    </div>
+                    <p>After that, cross multiply both equations and add them together. There, the pythagorean theorum is proven again&excl; There are a lot of real life application such as 
+                    finding the shortest distance between two places, finding sizes of PCs or TVs and so on. Maths is all around the world and integrated into our lives, you just do not know it. 
+                    If you have the chance the experience it in your daily life, you will appreciate the <strong>beauty</strong> of Mathematics.
+                    </p>
+                </ul>
+                <div class="quote">
+                    <blockquote><cite>
+                        "Nature is written in mathematical language.' <br> &mdash; Galileo Galilei, Italian astronomer, physicist and engineer
+                    </cite></blockquote>
+                </div> <br>
+                <li class="mainordered"><h3 id="heron">Heron's Formula</h3></li>
+                <p>When you want to find the <strong>area</strong> of a triangle, there are many ways that you can do. But I want to share a mind-blowing way 
+                that is applicable for <strong>every triangle</strong>. Essentially it uses the original formula for finding area of triangle, which is <var>(base)(height)/2</var>, 
+                then it expresses the height of the triangle in terms of the three sides. It also uses another variable called <var>s</var> which means <dfn>semi-perimeter</dfn>, to 
+                simplify the equation.
+                </p>
+                <figure style="float:left">
+                    <img src='./Media/Heron.png' alt="Heron's Formula" width="300" height="auto" onclick=easteralert()> <hr>
+                    <figcaption><a href="https://www.youtube.com/watch?v=9qbpmYqr4so&t=390s" target="_blank" class="maintexthover">Fig4.3 Heron's Formula</a></figcaption>
+                </figure>
+                <script>
+                    function easteralert(){
+                        window.alert("You found me, the second easter egg!")
+                    }
+                </script>
+                <br><br><p><nobr>I will</nobr> not show the entire proof but you can click <a href="https://www.youtube.com/watch?v=9qbpmYqr4so&t=390s" target="_blank" class="maintexthover">here</a> to learn more about the proof.
+                </p>
+                <p style="clear:left">An additional application that uses this formula is to find the area of <strong>any irregular quadrilateral</strong>, by splitting it into two separate triangles, 
+                then apply the formula two times.
+                </p>
+                <li class="mainordered"><h3 id="surfacearea">Surface Area &amp; Volume of a Sphere</h3></li>
+                <p>A sphere is not like any other cuboid where if you want to find its surface area or volume, you can easily find it because it has flat surfaces. You may have came 
+                across these formulas once in a while but it is <em>easily</em> forgotten. We can actually prove these formulas geometrically, which I think is one of the <strong>beautiful</strong> 
+                parts about mathematics.
+                </p>
+                <ul>
+                    <li><b>Surface Area</b></li>
+                    <p>Imagine that we have a sphere, we can <strong>divide</strong> the surface into many tiny rectangles, then <strong>project</strong> each tiny rectangles 
+                    outwards parralel to the <var>x</var> and <var>y</var>-axis. In the end we will get a cylinder with the same radius and height as the sphere and without the top and bottom. 
+                    </p>
+                    <p>After that, we can <strong>unwrap</strong> the cylinder to view it as a 2D rectangle. Notice that the area of the rectangle we get will be essentially the surface area 
+                    of the cylinder, which is the surface area of the sphere. By calculating the area of the rectangle, we get: <var>A = (2&pi;r)(2r) = 4&pi;r<sup>2</sup></var>. I also will not 
+                    show the entire process but you can click on the <em>figure</em> to see the animations.
+                    </p>
+                    <figure>
+                        <a href="https://www.youtube.com/watch?v=GNcFjFmqEc8" target="_blank"><img src='./Media/SurfaceArea.png' alt="Surface Area of Sphere" width="300" height="auto"></a> <hr>
+                        <figcaption><a href="https://www.youtube.com/watch?v=GNcFjFmqEc8" target="_blank" class="maintexthover">Fig4.4 Surface Area of a Sphere</a></figcaption>
+                    </figure>
+                    <p>Amazingly, you may have noticed that the surface area of a sphere is <strong>exactly four times the area of a circle with the same radius</strong>. We can visualize this by 
+                    unwrapping four circle into four indentical triangles. As shown in the <em>figure</em>, you can <strong>fit</strong> those four triangles into the rectangle. 
+                    How cool is that&excl;
+                    </p>
+                    <li><b>Volume</b></li>
+                    <p>The formula for the volume is proven similarly and <strong>it uses prior knowledge about surface area&excl;</strong> We again imagine a sphere, we can <strong>divide</strong> the sphere 
+                    into many tiny pyramids with their tips at the center of the sphere. Note that a volume of a single pyramid is <var>(base)(height)/3</var>, which mean we need to <strong>add up</strong> all the 
+                    tiny pyramids to get the volume of the entire sphere. After some factoring, we can notice that we can <strong>plug in</strong> <var>4&pi;r<sup>2</sup></var> as the total area of bases. In the end 
+                    we have proven the formula for the volume of a sphere.
+                    </p>
+                    <div class="fig">
+                    <figure>
+                        <a href="https://www.youtube.com/watch?v=xuPl_8o_j7k" target="_blank"><img src='./Media/Volume.png' alt="Volume of a Sphere" height="auto" style="max-width:500px"> <img src='./Media/Volume2.png' alt="Volume of a Sphere" height="auto" style="max-width:500px"></a> <hr>
+                        <figcaption><a href="https://www.youtube.com/watch?v=xuPl_8o_j7k" class="maintexthover">Fig4.5 Volume of a Sphere</a></figcaption>
+                    </figure>
+                    </div>
+                    <p>Again, I highly suggest to click on the <em>figure</em> to watch the animation for better understanding. For both of the proofs, we divided area or volume into many little segments, 
+                    and <strong>the more</strong> segments you split into, <strong>the more accurate</strong> the final solution will be. We actually integrated a concept of <em>limits</em> here but I will not dive 
+                    deep into it here.
+                    </p>
+                </ul>
+            </ol>
+            </div>
+        </div>
+        <a href='Geometry.html'><button type="button" class="backtotopbutton">Back to Top</button></a>
+    </main>
+    </div>
+    <footer>
+        <!--Sources, credits and copyright-->
+        <table class="footertable">
+            <tr>
+                <td class="footersection">
+                    <h3>Contact me</h3><br>
+                    <a href='https://www.facebook.com/profile.php?id=100005811885824' target="_blank"><img src='./Media/Facebook.png' alt="Facebook" width="50" height="50"  class="footerimg" title="Facebook"></a>
+                    <a href="https://www.instagram.com/brianlee305/?hl=en" target="_blank"><img src='./Media/Instagram.png' alt='Instagram' width="50" height="50" class="footerimg" title="Instagram"></a>
+                    <a href="https://twitter.com/sSuperRr1" target="_blank"><img src='./Media/Twitter.png' alt="Twitter" width="50" height="50" class="footerimg" title="Twitter"></a>
+                    <a href="https://www.youtube.com/channel/UCMUdpRzituT42vZZEcRmmZA" target="_blank"><img src='./Media/Youtube.png' alt="Youtube" width="50" height="50" class="footerimg" title="Youtube"></a>
+                </td>
+                <td class="footersection">
+                    <h3>Or email me </h3><br>
+                    <a href="mailto:minecraft2013brian@gmail.com" class="footertext"><b id="emailme">here</b></a>
+                </td>
+                <td class="footersection">
+                    <h3>Sources used:</h3>
+                    <cite><ol>
+                        <li>Cuemath. <a href="https://www.cuemath.com/herons-formula/" target="_blank" class="footertext">Heron's Formula</a></li>
+                    </ol></cite>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <h4>Disclaimer:</h4>
+                    Information included in this website may or may not be accurate as the information listed is what the author intepreted from multiple sources and websites. 
+                    User dicretion is adviced. <br><br>
+                    <small>&copy; Copyright 2022 The Fun In Mathematics. All rights reserved.</small>
+                </td>
+            </tr>
+        </table>
+    </footer>
+</body>
+</html>

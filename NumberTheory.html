@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The Fun in Mathematics</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./External CSS/external_css.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./Favicon/favicon-16x16.png">
+    <link rel="manifest" href="./Favicon/site.webmanifest">
+</head>
+<body>
+    <div class="account">
+        <div><button id="login">Login</button></div>
+        <div><button id="signup">Signup</button></div>
+        <div id="welcome"></div><div class="pop" onmouseleave="leavepopup()"><a href="./Account.html"><button id="loginusername"></button></a><span class="popuptext" id="popupmsg">View Account</span></div>
+        <div><a href="./index.html"><button id="logout" onclick="logout()">Logout</button></a></div>
+    </div>
+    <div class="popup" id="popup">
+        <div class="close-btn">&times;</div>
+        <div class="form">
+            <h2>Log In</h2>
+            <div class="formheight">
+                <div class="form-element">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-element">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" placeholder="Enter your password" required>
+                </div>
+                <!-- <div class="form-element">
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me">Remember me</label>
+                </div> -->
+            </div>
+            <div>
+                <div class="form-element">
+                    <div id="login-message">
+
+                    </div>
+                    <button onclick="loginfromlogin()" id="signinbutton">Sign in</button>
+                </div>
+                <div class="form-element">
+                    <a href="javascript:void(0)">Forgot password?</a>
+                </div>
+                <div class="form-element">
+                    <a href="javascript:void(0)" id="signuptext">Don't have an account? Sign up here.</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="signuppopup">
+        <div class="close-btn">&times;</div>
+        <div class="form">
+            <h2>Sign up</h2>
+            <div class="formheight">
+                <div class="form-element">
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" placeholder="Enter your first name" required>
+                </div>
+                <div class="form-element">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastname" placeholder="Enter your last name" required>
+                </div>
+                <div class="form-element">
+                    <label for="username">User Name</label>
+                    <input type="text" id="username" placeholder="Enter your user name" required>
+                </div>
+                <div class="form-element">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-element">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" placeholder="Enter your password" required>
+                </div>
+                <div class="form-element">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+                </div>
+            </div>
+            <div class="form-element">
+                <div id="error-message">
+                    
+                </div>
+                <button onclick="loginfromsignup()" id="signupbutton">Sign up</button>
+            </div>
+        </div>
+    </div>
+    <script src="./Scripts/loginsignup.js"></script>
+    <script src="./Scripts/account.js"></script>
+    <header>
+        <img src="./Media/Nuvola_Math_and_Inf.png" alt="Math Symbols" width="150" height="150"> <h1>The Fun in Mathematics</h1> <img src="./Media/Nuvola_Math_and_Inf.png" alt="Math Symbols" width="150" height="150">
+    </header>
+    <nav class="sticky">
+        <div class="navigation-container">
+            <ul id="navscroll" onscroll="scrolltrack()">
+                <li class="dropdown">
+                    <a href='index.html' class="dropbtn">Home</a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="index.html?scroll=1#backstory" onclick="offset()">Backstory</a>
+                        <a href="index.html?scroll=1#content" onclick="offset()">Content</a>
+                        <a href="index.html?scroll=1#purpose" onclick="offset()">Purpose</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href='History.html' class="dropbtn">History</a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="History.html?scroll=1#prehistoricmaths" onclick="offset()">Prehistoric Maths</a>
+                        <a href="History.html?scroll=1#midcenturymaths" onclick="offset()">Mid Century Maths</a>
+                        <a href="History.html?scroll=1#16thcenturymaths" onclick="offset()">16th Century Onwards Mathematics</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href='Algebra.html' class="dropbtn">Algebra</a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="Algebra.html?scroll=1#quadraticformula" onclick="offset()">Quadratic Formula</a>
+                        <a href="Algebra.html?scroll=1#eulersidentity" onclick="offset()">Euler's Identity</a>
+                        <a href="Algebra.html?scroll=1#fundamentalalgebra" onclick="offset()">Fundamental Theorum of Algebra</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href='Geometry.html' class="dropbtn">Geometry</a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="Geometry.html?scroll=1#pythagorean" onclick="offset()">Pythagorean Theorum</a>
+                        <a href="Geometry.html?scroll=1#heron" onclick="offset()">Heron's Formula</a>
+                        <a href="Geometry.html?scroll=1#surfacearea" onclick="offset()">Surface Area &amp; Volume of a Sphere</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href='Trigonometry.html' class="dropbtn">Trigonometry</a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="Trigonometry.html?scroll=1#trigonometricidentity" onclick="offset()">Famous Trigonometric Identity</a>
+                        <a href="Trigonometry.html?scroll=1#sineandcosinerule" onclick="offset()">Sine &amp; Cosine Rule</a>
+                        <a href="Trigonometry.html?scroll=1#theunitcircle" onclick="offset()">The Unit Circle</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href='Calculus.html' class="dropbtn">Calculus</a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="Calculus.html?scroll=1#differentiation" onclick="offset()">Differentiation &amp; Integration</a>
+                        <a href="Calculus.html?scroll=1#taylor" onclick="offset()">Taylor Series</a>
+                        <a href="Calculus.html?scroll=1#lhopitalsrule" onclick="offset()">L'H&ocirc;pital's Rule</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href='NumberTheory.html' id="active" class="dropbtn"><nobr>Number Theory</nobr></a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="NumberTheory.html?scroll=1#divisibilityrules" onclick="offset()">Divisibility Rules</a>
+                        <a href="NumberTheory.html?scroll=1#primenumbers" onclick="offset()">Prime Numbers</a>
+                        <a href="NumberTheory.html?scroll=1#numberofzeros" onclick="offset()">Number of Zero's</a>
+                        <a href="NumberTheory.html?scroll=1#numberoffactors" onclick="offset()">Number of Factors</a>
+                    </div>
+                </li>
+                <li><a href='Community.html'>Community</a></li>
+                <li><a href='Quizzes.html'>Quizzes</a></li>
+            </ul>
+        </div>
+        <script src="./Scripts/Scrollwheeltrack.js" defer></script>
+    </nav>
+    <div class="wrapper">
+    <aside>
+        <!--About author, Fun facts and additional knowledge -->
+        <div class="asidesection">
+            <h3 class="asideheader"><b>Author</b></h3>
+            <p>Hi there. I am a student from Sunway University and I made this website as an assignment for Web Fundamentals.
+            This is basically my <em>first time</em> coding in <code>HTML</code> language and I am still learning the basics, so 
+            if there is anything that I can improve on, <strong>be sure</strong> to give suggestions&excl; <span id="dots">...... </span>
+            </p>
+            <div id="more">
+                <p>Back when I was young, I always had a <em>massive</em> interest in Mathematics, it seemed like everything in the world
+                had to do with the laws of Mathematics. That idea intrigued me so I wanted to know more about the <em>deep</em> secrets of the universe.
+                Thanks to my mother, I always had a good number sense and it <em>tremendously</em> helped me a lot in problem solving.
+                </p>
+                <p>Mathematics is unanimously known as the <strong>most</strong> hated subject among students because of the tiring calculations. I wish
+                to change that negative perspective towards Mathematics by talking about the fun within Mathematics, which include the reasons why I 
+                love the subject.
+                </p>
+            </div>
+            <button onclick="readmore()" id="readmore-btn">Read More</button>
+        </div>
+        <script src="./Scripts/Readmore-readless.js"></script>
+        <div class="funfact">
+            <h3 class="asideheader"><b>Fun facts</b></h3>
+            <p>Starting with any four digit number (that has at least two different digits) just follow the following steps:
+                <ol>
+                    <li>Arrange the digits of the four digit number in descending/ ascending order to make the largest and smallest numbers possible.</li>
+                    <li>Subtract the smaller number from the larger one.</li>
+                    <li>Take the answer and repeat the process.</li>
+                </ol>
+                Eventually you'll end up at 6174 or <em>'Kaprekar's Constant'</em>. Just as remarkable, it never takes more than seven stages to get there.<br><br>
+                <i>You can try and proof it&excl;</i>
+            </p>
+        </div>
+    </aside>
+    <main>
+        <!--Main text-->
+        <div>
+            <h2>Number Theory</h2>
+            <p>This topic is my <em>favourite</em> subject out of all the topics, because it plays around the <strong>properties</strong> of numbers and the <strong>relationship</strong> between them. 
+            It also requires a lot of <strong>imagination</strong> and <strong>intuition</strong> so I find it fascinating. I was previously in my high school's mathematics team 
+            and had taken part in some competitions, so I had the chance to come across many kinds of number theory problems. I will share some interesting knowledge in this section.
+            </p>
+            <ol>
+                <li class="mainordered"><h3 id="divisibilityrules">Divisibility Rules</h3></li>
+                <p>I believe we all know the divisibility rule of smaller number such as <var>2,3,4,5</var> and so on, but I want to share a <strong>general rule</strong> for divisibility that 
+                works with any whole number. I will use the number <var>7, 13</var> as an example.
+                </p>
+                <ul>
+                    <li><b>Divisibility Rule of <var>7</var></b></li>
+                    <figure style="float:right">
+                        <img src='./Media/Divisibility7.png' alt="Divisibility of 7" width="auto" height="250"> <hr>
+                        <figcaption>Fig7.1 Divisibility of 7</figcaption>
+                    </figure>
+                    <p>Notice that it is important to find ways to factor out <var>7</var>. In the <em>figure</em> given, the first part of the equation is a <strong>factor of <var>7</var></strong> and 
+                    the second part of the equation is a <strong>factor of <var>3</var></strong>. In order for the original number to be divisibility by <var>7</var>, the expression <var>abc-2d</var> 
+                    has to be a <strong>factor of <var>7</var></strong>. In other words, you just have to take out the last digit, multiply it by <var>2</var>, subtract it from the remaining number. If the result 
+                    is divisible by <var>7</var>, then you are done (<em>Note that this process can be done recursively for bigger numbers&excl;</em>).
+                    </p> <br>
+                    <li style="clear:right"><b>Divisibility Rule of <var>13</var></b></li>
+                    <figure style="float:right">
+                        <img src='./Media/Divisibility13.png' alt="Divisibility of 13" width="auto" height="250"> <hr>
+                        <figcaption>Fig7.2 Divisibility of 13</figcaption>
+                    </figure>
+                    <p>In the case of <var>13</var>, notice that it does not look exactly the same as before, this process needs a bit of <em>intuition</em> as mentioned before&excl; This time, 
+                    the expression <var>abc+4d</var> has to be divisible by <var>13</var> in order for the original number to be divisible by <var>13</var>. In English, this means you have to take out 
+                    the last digit, multiply it by <var>4</var>, add it to the remaining number. This process also can be done recursively for bigger numbers.
+                    </p>
+                </ul> <br><br>
+                <p><i>Now it is your turn to find out the formulas for other numbers&excl;</i>
+                </p>
+                <li style="clear:right" class="mainordered"><h3 id="primenumbers">Prime Numbers</h3></li>
+                <p>Prime numbers are numbers that only have itself and <var>1</var> as it factors. Interestingly, there are a lot of facts regarding prime numbers, I will 
+                talk about two in this section.
+                </p>
+                <ul>
+                    <li><b>Infinite Primes</b></li>
+                    <p>There are many proofs that prove there are indeed an <strong>infinite amount</strong> of prime numbers. Among those, the most simple one is by <em>Euclid</em>. 
+                    The proof is as follows:
+                    </p>
+                    <p>Call the primes in our finite list</p>
+                    <blockquote class="numbertheory"><var>p<sub>1</sub>, p<sub>2</sub>, p<sub>3</sub>, ... , p<sub>r</sub></var>.</blockquote>
+                    <p>Let <var>P</var> be any common multiple of these primes plus one, for example:</p>
+                    <blockquote class="numbertheory"><var>P=p<sub>1</sub>p<sub>2</sub>p<sub>3</sub>...p<sub>r</sub>+1</var>.</blockquote>
+                    <p>Now <var>P</var> is either prime or it is not. If it is prime, then <var>P</var> is a prime that was not in our list.</p>
+                    <p>If <var>P</var> is not prime, then it is divisible by some prime, call it <var>p</var>.  Notice <var>p</var> can not be any of <var>p<sub>1</sub>, p<sub>2</sub>, p<sub>3</sub>, ... , p<sub>r</sub></var>, 
+                    otherwise <var>p</var> would divide <var>1</var>, which is impossible.</p>
+                    <p>So this prime <var>p</var> is some prime that was not in our original list.  Either way, the original list was incomplete</p>
+                    <p><b>Conclusion: There are infinitely many primes as we can always find a bigger prime number that is not in the list.</b></p> <br>
+                    <li><b>AKS Primality Test</b></li>
+                    <p>Ever wondered is there a systematic way for finding out whether a number is prime? This test is mainly for computer codes because it deals with big coefficients, 
+                    I will just share how it works because it is too complicated. You can click on the <em>figure</em> to learn more.
+                    </p>
+                    <div class="fig">
+                    <figure>
+                        <a href="https://www.youtube.com/watch?v=HvMSRWTE2mI" target="_blank"><img src='./Media/AKS.png' alt="AKS Primality Test" width="300" height="auto"></a> <hr>
+                        <figcaption><a href="https://www.youtube.com/watch?v=HvMSRWTE2mI" target="_blank" class="maintexthover">Fig7.3 AKS Primality Test</a></figcaption>
+                    </figure>
+                    </div>
+                    <p>You just have to plug in the number you want to test into <var>p</var>. If you expand the expression, you will realise it is just the <em>binomial expansion</em> without 
+                    the first and last term. Additionally, the <strong>coefficients</strong> will be from <em>Pascal's Triangle</em> as seen in the <em>figure</em>.
+                    </p>
+                    <figure style="float:left">
+                        <img src='./Media/Pascal.png' alt="Pascal's Triangle" width="300" height="auto"> <hr>
+                        <figcaption>Fig7.4 Pascal's Triangle</figcaption>
+                    </figure> <br><br>
+                    <p>In the <em>figure</em>, you can see that for the prime numbers <var>2,3,5,7</var>, the <strong>coefficients</strong> in the <em>Pascal's triangle</em> without 
+                    the first and last <var>'1'</var> is indeed all <strong>multiples of the primes themselves</strong>&excl; Unbelievable right&excl;
+                    </p>
+                </ul>
+                <div class="quote" style="clear:left">
+                <blockquote><cite>
+                    "I've always enjoyed mathematics. It is the most precise and concise way of expressing an idea." <br> &mdash; N.R. Narayana Murthy, Indian IT industrialist
+                </cite></blockquote>
+                </div><br>
+                <li class="mainordered"><h3 id="numberofzeros">Number of Zero's</h3></li>
+                <p>These types of questions can be seen in maths competitions, where you need to find how many zeros does some big number end with. To solve these kinds of 
+                questions, you need to know that you need <strong>pairs of factors <var>2,5</var></strong>, because these two multiplied will give us <var>10</var>, which are the ending zeros.
+                </p>
+                <figure style="float:right">
+                    <img src='./Media/ZeroExample.png' alt="Number of Zero's" width="300" height="auto"> <hr>
+                    <figcaption>Fig7.5 Number of Zero's Example</figcaption>
+                </figure> <br>
+                <p>For example, how many ending zero's are there in the number <var>75!</var>? Intuitively, you can know that there will be <strong>more factors of <var>2</var> than <var>5</var></strong>. 
+                So you only need to find the amount of factor <var>5</var>, you can use a <em>technique</em> which incorporates the <em>floor function</em> as seen in the <em>figure</em>. 
+                </p>
+                <li style="clear:right" class="mainordered"><h3 id="numberoffactors">Number of Factors</h3></li>
+                <p>Another type of question that asks how many factors a number has. Before explaining how the formula works, you first need to prime factorize the number. To 
+                find out how many total factors there are, the question is basically asking for the total <strong>combinations</strong> of the different prime factors including <var>'1'</var>, which actually 
+                gives you all the <strong>unique</strong> factors you can form. You can click <a href="https://www.amansmathsblogs.com/factor-formula-how-to-find-total-number-of-factors-of-any-number/" class="maintexthover">here</a> or click on the <em>figure</em> to know more.
+                </p>
+                <div class="fig">
+                <figure>
+                    <a href="https://www.amansmathsblogs.com/factor-formula-how-to-find-total-number-of-factors-of-any-number/" target="_blank"><img src='./Media/FactorExample.png' alt="Number of Factors" height="auto" style="max-width:700px"></a> <hr>
+                    <figcaption><a href="https://www.amansmathsblogs.com/factor-formula-how-to-find-total-number-of-factors-of-any-number/" target="_blank" class="maintexthover">Fig7.6 Number of Factors</a></figcaption>
+                </figure>
+                </div>
+                <p>For example, how many unique factors are there in <var>3600</var>?
+                </p>
+                <figure>
+                    <img src='./Media/FactorExample2.png' alt="Number of Factors Example" height="auto" style="max-width:700px"> <hr>
+                    <figcaption>Fig7.6 Number of Factors Example</figcaption>
+                </figure>
+            </ol>
+        </div>
+        <a href='NumberTheory.html'><button type="button" class="backtotopbutton">Back to Top</button></a>
+    </main>
+    </div>
+    <footer>
+        <!--Sources, credits and copyright-->
+        <table class="footertable">
+            <tr>
+                <td class="footersection">
+                    <h3>Contact me</h3><br>
+                    <a href='https://www.facebook.com/profile.php?id=100005811885824' target="_blank"><img src='./Media/Facebook.png' alt="Facebook" width="50" height="50"  class="footerimg" title="Facebook"></a>
+                    <a href="https://www.instagram.com/brianlee305/?hl=en" target="_blank"><img src='./Media/Instagram.png' alt='Instagram' width="50" height="50" class="footerimg" title="Instagram"></a>
+                    <a href="https://twitter.com/sSuperRr1" target="_blank"><img src='./Media/Twitter.png' alt="Twitter" width="50" height="50" class="footerimg" title="Twitter"></a>
+                    <a href="https://www.youtube.com/channel/UCMUdpRzituT42vZZEcRmmZA" target="_blank"><img src='./Media/Youtube.png' alt="Youtube" width="50" height="50" class="footerimg" title="Youtube"></a>
+                </td>
+                <td class="footersection">
+                    <h3>Or email me </h3><br>
+                    <a href="mailto:minecraft2013brian@gmail.com" class="footertext"><b id="emailme">here</b></a>
+                </td>
+                <td class="footersection">
+                    <h3>Sources used:</h3>
+                    <cite><ol>
+                        <li>Chris K. Calswell (2021). <a href="https://primes.utm.edu/notes/proofs/infinite/euclids.html" target="_blank" class="footertext">Euclid's Proof on Infinite Primes</a></li>
+                        <li>BYJU'S (2022).<a href="https://byjus.com/maths/factors-of-a-number/#:~:text=The%20formula%20for%20the%20total,1)%20(c%2B1)" target="_blank" class="footertext">Factors of a Number</a></li>
+                        <li>Wordpandit (2022). <a href="https://wordpandit.com/extra-problems-for-number-of-zeros-question-type/" target="_blank" class="footertext">Extra Problems For Number of Zeros</a></li>
+                    </ol></cite>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <h4>Disclaimer:</h4>
+                    Information included in this website may or may not be accurate as the information listed is what the author intepreted from multiple sources and websites. 
+                    User dicretion is adviced. <br><br>
+                    <small>&copy; Copyright 2022 The Fun In Mathematics. All rights reserved.</small>
+                </td>
+            </tr>
+        </table>
+    </footer>
+</body>
+</html>

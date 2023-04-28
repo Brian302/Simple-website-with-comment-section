@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The Fun in Mathematics</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./External CSS/external_css.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./Favicon/favicon-16x16.png">
+    <link rel="manifest" href="./Favicon/site.webmanifest">
+</head>
+<body>
+    <div class="account">
+        <div><button id="login">Login</button></div>
+        <div><button id="signup">Signup</button></div>
+        <div id="welcome"></div><div class="pop" onmouseleave="leavepopup()"><a href="./Account.html"><button id="loginusername"></button></a><span class="popuptext" id="popupmsg">View Account</span></div>
+        <div><a href="./index.html"><button id="logout" onclick="logout()">Logout</button></a></div>
+    </div>
+    <div class="popup" id="popup">
+        <div class="close-btn">&times;</div>
+        <div class="form">
+            <h2>Log In</h2>
+            <div class="formheight">
+                <div class="form-element">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-element">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" placeholder="Enter your password" required>
+                </div>
+                <!-- <div class="form-element">
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me">Remember me</label>
+                </div> -->
+            </div>
+            <div>
+                <div class="form-element">
+                    <div id="login-message">
+
+                    </div>
+                    <button onclick="loginfromlogin()" id="signinbutton">Sign in</button>
+                </div>
+                <div class="form-element">
+                    <a href="javascript:void(0)">Forgot password?</a>
+                </div>
+                <div class="form-element">
+                    <a href="javascript:void(0)" id="signuptext">Don't have an account? Sign up here.</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="signuppopup">
+        <div class="close-btn">&times;</div>
+        <div class="form">
+            <h2>Sign up</h2>
+            <div class="formheight">
+                <div class="form-element">
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" placeholder="Enter your first name" required>
+                </div>
+                <div class="form-element">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastname" placeholder="Enter your last name" required>
+                </div>
+                <div class="form-element">
+                    <label for="username">User Name</label>
+                    <input type="text" id="username" placeholder="Enter your user name" required>
+                </div>
+                <div class="form-element">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-element">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" placeholder="Enter your password" required>
+                </div>
+                <div class="form-element">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+                </div>
+            </div>
+            <div class="form-element">
+                <div id="error-message">
+                    
+                </div>
+                <button onclick="loginfromsignup()" id="signupbutton">Sign up</button>
+            </div>
+        </div>
+    </div>
+    <script src="./Scripts/loginsignup.js"></script>
+    <script src="./Scripts/account.js"></script>
+    <header>
+        <img src="./Media/Nuvola_Math_and_Inf.png" alt="Math Symbols" width="150" height="150"> <h1>The Fun in Mathematics</h1> <img src="./Media/Nuvola_Math_and_Inf.png" alt="Math Symbols" width="150" height="150">
+    </header>
+    <nav class="sticky">
+        <div class="navigation-container">
+            <ul id="navscroll" onscroll="scrolltrack()">
+                <li class="dropdown">
+                    <a href='index.html' class="dropbtn">Home</a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="index.html?scroll=1#backstory" onclick="offset()">Backstory</a>
+                        <a href="index.html?scroll=1#content" onclick="offset()">Content</a>
+                        <a href="index.html?scroll=1#purpose" onclick="offset()">Purpose</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href='History.html' id="active" class="dropbtn">History</a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="History.html?scroll=1#prehistoricmaths" onclick="offset()">Prehistoric Maths</a>
+                        <a href="History.html?scroll=1#midcenturymaths" onclick="offset()">Mid Century Maths</a>
+                        <a href="History.html?scroll=1#16thcenturymaths" onclick="offset()">16th Century Onwards Mathematics</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href='Algebra.html' class="dropbtn">Algebra</a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="Algebra.html?scroll=1#quadraticformula" onclick="offset()">Quadratic Formula</a>
+                        <a href="Algebra.html?scroll=1#eulersidentity" onclick="offset()">Euler's Identity</a>
+                        <a href="Algebra.html?scroll=1#fundamentalalgebra" onclick="offset()">Fundamental Theorum of Algebra</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href='Geometry.html' class="dropbtn">Geometry</a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="Geometry.html?scroll=1#pythagorean" onclick="offset()">Pythagorean Theorum</a>
+                        <a href="Geometry.html?scroll=1#heron" onclick="offset()">Heron's Formula</a>
+                        <a href="Geometry.html?scroll=1#surfacearea" onclick="offset()">Surface Area &amp; Volume of a Sphere</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href='Trigonometry.html' class="dropbtn">Trigonometry</a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="Trigonometry.html?scroll=1#trigonometricidentity" onclick="offset()">Famous Trigonometric Identity</a>
+                        <a href="Trigonometry.html?scroll=1#sineandcosinerule" onclick="offset()">Sine &amp; Cosine Rule</a>
+                        <a href="Trigonometry.html?scroll=1#theunitcircle" onclick="offset()">The Unit Circle</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href='Calculus.html' class="dropbtn">Calculus</a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="Calculus.html?scroll=1#differentiation" onclick="offset()">Differentiation &amp; Integration</a>
+                        <a href="Calculus.html?scroll=1#taylor" onclick="offset()">Taylor Series</a>
+                        <a href="Calculus.html?scroll=1#lhopitalsrule" onclick="offset()">L'H&ocirc;pital's Rule</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href='NumberTheory.html' class="dropbtn"><nobr>Number Theory</nobr></a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="NumberTheory.html?scroll=1#divisibilityrules" onclick="offset()">Divisibility Rules</a>
+                        <a href="NumberTheory.html?scroll=1#primenumbers" onclick="offset()">Prime Numbers</a>
+                        <a href="NumberTheory.html?scroll=1#numberofzeros" onclick="offset()">Number of Zero's</a>
+                        <a href="NumberTheory.html?scroll=1#numberoffactors" onclick="offset()">Number of Factors</a>
+                    </div>
+                </li>
+                <li><a href='Community.html'>Community</a></li>
+                <li><a href='Quizzes.html'>Quizzes</a></li>
+            </ul>
+        </div>
+        <script src="./Scripts/Scrollwheeltrack.js" defer></script>
+    </nav>
+    <div class="wrapper">
+    <aside>
+        <!--About author, Fun facts and additional knowledge -->
+        <div class="asidesection">
+            <h3 class="asideheader"><b>Author</b></h3>
+            <p>Hi there. I am a student from Sunway University and I made this website as an assignment for Web Fundamentals.
+            This is basically my <em>first time</em> coding in <code>HTML</code> language and I am still learning the basics, so 
+            if there is anything that I can improve on, <strong>be sure</strong> to give suggestions&excl; <span id="dots">...... </span>
+            </p>
+            <div id="more">
+                <p>Back when I was young, I always had a <em>massive</em> interest in Mathematics, it seemed like everything in the world
+                had to do with the laws of Mathematics. That idea intrigued me so I wanted to know more about the <em>deep</em> secrets of the universe.
+                Thanks to my mother, I always had a good number sense and it <em>tremendously</em> helped me a lot in problem solving.
+                </p>
+                <p>Mathematics is unanimously known as the <strong>most</strong> hated subject among students because of the tiring calculations. I wish
+                to change that negative perspective towards Mathematics by talking about the fun within Mathematics, which include the reasons why I 
+                love the subject.
+                </p>
+            </div>
+            <button onclick="readmore()" id="readmore-btn">Read More</button>
+        </div>
+        <script src="./Scripts/Readmore-readless.js"></script>
+        <div class="funfact">
+            <h3 class="asideheader"><b>Fun facts</b></h3>
+            <p>A year is not exactly 365 years &mdash; it is 365.2564 days&excl; That is why we have a leap year every <strong>four</strong> years.
+            </p>
+        </div>
+    </aside>
+    <main>
+        <!--Main text-->
+        <h2>History</h2>
+        <div>
+            <p>I know history is a <strong>very</strong> boring topic so I will try to make it simple and interesting. In the prehistoric age, there was no 
+            such things as maths, human beings at that time encountered many problems because they could not keep track of things, do measurements or 
+            count. The first advances in mathematics start in Mesopotamia, where the most fundamental principles were born: <strong>numbers</strong>.
+            </p>
+        </div>
+        <div>
+            <figure style="float:right">
+                <img src='./Media/EgyptMaths.png' alt="Egyptians Maths" width="300" height="auto"> <hr>
+                <figcaption>Fig2.1 Egyptian Mathematics</figcaption>
+            </figure> <br>
+            <h3 id="prehistoricmaths">Prehistoric Maths</h3>
+            <p>Early men kept track of natural occurrences by marking on bones or on the ceiling. But as the amount gets bigger, it will be harder to interpret 
+            amount. So people started to use items to <strong>symbolize</strong> bigger amounts such as 10, 100. Egyptians used symbols to groups of objects in an attempt 
+            to make the description of larger numbers easier. 
+            </p> <br>
+            <p style="clear:right">Sumerian and Babylonian mathematics were based on <strong>base 60</strong>, which is still used in this time. For example the time measurement system,
+            360&#176; in a circle and so on. They also created a circle character for <strong>zero</strong>. Besides, they made sense of square numbers and quadratic 
+            equations, they were able to approximate irrational numbers and solve equations. Other than that, they used geometric shapes in buildings and designs. 
+            Even calculations of areas and volumes were made.
+            </p>
+            <figure style="float:left">
+                <img src='./Media/BabyMaths.png' alt="Babylonian Maths" width="300" height="auto"> <hr>
+                <figcaption>Fig2.2 Babylonian Mathematics</figcaption>
+            </figure>
+            <p style="clear:left">Egyptians started using the <strong>base 10</strong> number system. Furthurmore, there were explicit demonstrations of how <strong>multiplication and division</strong> was carried out. 
+            Practical problems of trade and the market led to the development of a notation for fractions, unit fractions were mostly used. Egypt is known for their 
+            pyramids, there is certainly evidence that they knew the formula for the volume of a pyramid. 
+            </p>
+        </div>
+        <div class="quote">
+        <blockquote><cite>
+            "What is mathematics? It is only a systematic effort of solving puzzles posed by nature." <br> &mdash; Shakuntala Devi
+        </cite></blockquote>
+        </div>
+        <div> <br>
+            <h3 id="midcenturymaths">Mid Century Maths</h3>
+            <figure style="float:left">
+                <img src='./Media/Pythagoras.png' alt="Greek Maths" width="300" height="auto"> <hr>
+                <figcaption>Fig2.3 Greek Mathematics</figcaption>
+            </figure>
+            <p><nobr>For Greeks</nobr>, the most popular mathematicians are <strong>Pythagoras, Plato and Aristotle</strong>. The former came up with the <strong>Pythagorean Theorum</strong>, 
+            which we will look into it later. His followers &mdash; Pythagoreans also had achievements in geometry and in number theory. Another famous 
+            mathematician named Euclid is known as <em>"Father of Geometry"</em>, he generalized formulas, calculated volumes, proved theorums and so on. 
+            He was the first to realize and prove that there are infinitely many prime numbers, it is known as <em>Euclid's Theorum</em>.
+            </p>
+            <figure style="clear:left;float:right">
+                <img src='./Media/IndianTrigonometry.gif' alt="Indian Maths" width="300" height="auto"> <hr>
+                <figcaption>Fig2.4 Indian Mathematics</figcaption>
+            </figure>
+            <p style="clear:left"><nobr>For Indians</nobr>, it was actually <strong>Brahmagupta</strong> that established the basic mathematical rules for dealing with zero and negative numbers.
+            They made advances in the field of trigonometry. By using <strong>geometry and trigonometric functions</strong>, there were able to calculate the relative distances between 
+            the Earth and the Moon.
+            </p>
+            <p style="clear:right">A Persian mathematician named Al-Khwarizmi is known as <em>"Father of algebra"</em> because he introduced the fundamental algebraic methods and techniques for solving equations. 
+            For example, the methods of <em>"reduction", "completion"</em> and <em>"balancing"</em>. On the other hand, Al-Karaji used mathematical <strong>induction</strong> to prove the <em>binomial theorem</em>.
+            </p> <br>
+            <p>As for the Italians, <strong>Fibonacci</strong> was probably the most talented Western mathematician. He discovered a sequence of numbers known as the 
+            <em>Fibonacci Sequence</em>, it is very fascinating to realise that a lot of the real world phenomena is revolved around the sequence, for example in the growth 
+            of flowers. In the later times, the <em>Golden Ratio</em> was derived by using the ratio of consecutive terms.
+            </p>
+            <figure>
+                <img src='./Media/Fibonacci.png' alt="Fibonacci in Nature" width="300" height="auto"> <hr>
+                <figcaption>Fig2.5 Italian Mathematics</figcaption>
+            </figure>
+        </div>
+        <div>
+            <h3 id="16thcenturymaths">16th Century Onwards Mathematics</h3>
+            There was a lot that happened during this time until the present time, so I will just state some major breakthroughs.
+            <ul>
+                <li>Equals, multiplication, division, radical (root), decimal and inequality symbols were gradually introduced and standardized.</li>
+                <li>The formula for cubic equation was derived.</li>
+                <li>Cartesian coordinate system was proposed and it allowed the conversion of geometry into algebra (and vice versa).</li>
+                <li>Fermat's last theorum, <em>click on the figure</em> to learn more:</li><br>
+                    <figure style="margin:auto">
+                        <a href="https://mathworld.wolfram.com/FermatsLastTheorem.html" target="_blank"><img src='./Media/Fermat.gif' alt="Fermat's Last Theorum" width="300" height="auto"></a> <hr>
+                        <figcaption><a href="https://mathworld.wolfram.com/FermatsLastTheorem.html" target="_blank" class="maintexthover">Fig2.6 Fermat's Last Theorum</a></figcaption>
+                    </figure><br><br>
+                <li>Pascal's triangle, which is a tabular presentation of binomial co-efficients.</li>
+                <li>Mathematical notations created or popularized by Euler</li>
+                <li>Representation of complex numbers using the complex plane.</li>
+                <li>Newton's Fundamental Theorum of Calculus</li>
+                <li>Gaussian distribution, the Gaussian function and the Gaussian error curve.</li>
+            </ul>
+            <i>*Note that I will come back to some of the terms listed here in future sections.</i>
+        </div>
+        <a href='History.html'><button type="button" class="backtotopbutton">Back to Top</button></a>
+    </main>
+    </div>
+    <footer>
+        <!--Sources, credits and copyright-->
+        <table class="footertable">
+            <tr>
+                <td class="footersection">
+                    <h3>Contact me</h3><br>
+                    <a href='https://www.facebook.com/profile.php?id=100005811885824' target="_blank"><img src='./Media/Facebook.png' alt="Facebook" width="50" height="50"  class="footerimg" title="Facebook"></a>
+                    <a href="https://www.instagram.com/brianlee305/?hl=en" target="_blank"><img src='./Media/Instagram.png' alt='Instagram' width="50" height="50" class="footerimg" title="Instagram"></a>
+                    <a href="https://twitter.com/sSuperRr1" target="_blank"><img src='./Media/Twitter.png' alt="Twitter" width="50" height="50" class="footerimg" title="Twitter"></a>
+                    <a href="https://www.youtube.com/channel/UCMUdpRzituT42vZZEcRmmZA" target="_blank"><img src='./Media/Youtube.png' alt="Youtube" width="50" height="50" class="footerimg" title="Youtube"></a>
+                </td>
+                <td class="footersection">
+                    <h3>Or email me </h3><br>
+                    <a href="mailto:minecraft2013brian@gmail.com" class="footertext"><b id="emailme">here</b></a>
+                </td>
+                <td class="footersection">
+                    <h3>Sources used:</h3>
+                    <cite><ol>
+                        <li>Luke Mastin (2020). <a href="https://www.storyofmathematics.com/" target="_blank" class="footertext">Story of Maths</a></li>
+                        <li>Wikipedia. <a href="https://en.wikipedia.org/wiki/Mathematics#:~:text=Beginning%20in%20the%206th%20century,axiom%2C%20theorem%2C%20and%20proof." target="_blank" class="footertext">Mathematics</a></li>
+                    </ol></cite>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <h4>Disclaimer:</h4>
+                    Information included in this website may or may not be accurate as the information listed is what the author intepreted from multiple sources and websites. 
+                    User dicretion is adviced. <br><br>
+                    <small>&copy; Copyright 2022 The Fun In Mathematics. All rights reserved.</small>
+                </td>
+            </tr>
+        </table>
+    </footer>
+</body>
+</html>

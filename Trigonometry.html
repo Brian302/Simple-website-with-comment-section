@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The Fun in Mathematics</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./External CSS/external_css.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./Favicon/favicon-16x16.png">
+    <link rel="manifest" href="./Favicon/site.webmanifest">
+</head>
+<body>
+    <div class="account">
+        <div><button id="login">Login</button></div>
+        <div><button id="signup">Signup</button></div>
+        <div id="welcome"></div><div class="pop" onmouseleave="leavepopup()"><a href="./Account.html"><button id="loginusername"></button></a><span class="popuptext" id="popupmsg">View Account</span></div>
+        <div><a href="./index.html"><button id="logout" onclick="logout()">Logout</button></a></div>
+    </div>
+    <div class="popup" id="popup">
+        <div class="close-btn">&times;</div>
+        <div class="form">
+            <h2>Log In</h2>
+            <div class="formheight">
+                <div class="form-element">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-element">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" placeholder="Enter your password" required>
+                </div>
+                <!-- <div class="form-element">
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me">Remember me</label>
+                </div> -->
+            </div>
+            <div>
+                <div class="form-element">
+                    <div id="login-message">
+
+                    </div>
+                    <button onclick="loginfromlogin()" id="signinbutton">Sign in</button>
+                </div>
+                <div class="form-element">
+                    <a href="javascript:void(0)">Forgot password?</a>
+                </div>
+                <div class="form-element">
+                    <a href="javascript:void(0)" id="signuptext">Don't have an account? Sign up here.</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="signuppopup">
+        <div class="close-btn">&times;</div>
+        <div class="form">
+            <h2>Sign up</h2>
+            <div class="formheight">
+                <div class="form-element">
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" placeholder="Enter your first name" required>
+                </div>
+                <div class="form-element">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastname" placeholder="Enter your last name" required>
+                </div>
+                <div class="form-element">
+                    <label for="username">User Name</label>
+                    <input type="text" id="username" placeholder="Enter your user name" required>
+                </div>
+                <div class="form-element">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-element">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" placeholder="Enter your password" required>
+                </div>
+                <div class="form-element">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+                </div>
+            </div>
+            <div class="form-element">
+                <div id="error-message">
+                    
+                </div>
+                <button onclick="loginfromsignup()" id="signupbutton">Sign up</button>
+            </div>
+        </div>
+    </div>
+    <script src="./Scripts/loginsignup.js"></script>
+    <script src="./Scripts/account.js"></script>
+    <header>
+        <img src="./Media/Nuvola_Math_and_Inf.png" alt="Math Symbols" width="150" height="150"> <h1>The Fun in Mathematics</h1> <img src="./Media/Nuvola_Math_and_Inf.png" alt="Math Symbols" width="150" height="150">
+    </header>
+    <nav class="sticky">
+        <div class="navigation-container">
+            <ul id="navscroll" onscroll="scrolltrack()">
+                <li class="dropdown">
+                    <a href='index.html' class="dropbtn">Home</a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="index.html?scroll=1#backstory" onclick="offset()">Backstory</a>
+                        <a href="index.html?scroll=1#content" onclick="offset()">Content</a>
+                        <a href="index.html?scroll=1#purpose" onclick="offset()">Purpose</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href='History.html' class="dropbtn">History</a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="History.html?scroll=1#prehistoricmaths" onclick="offset()">Prehistoric Maths</a>
+                        <a href="History.html?scroll=1#midcenturymaths" onclick="offset()">Mid Century Maths</a>
+                        <a href="History.html?scroll=1#16thcenturymaths" onclick="offset()">16th Century Onwards Mathematics</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href='Algebra.html' class="dropbtn">Algebra</a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="Algebra.html?scroll=1#quadraticformula" onclick="offset()">Quadratic Formula</a>
+                        <a href="Algebra.html?scroll=1#eulersidentity" onclick="offset()">Euler's Identity</a>
+                        <a href="Algebra.html?scroll=1#fundamentalalgebra" onclick="offset()">Fundamental Theorum of Algebra</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href='Geometry.html' class="dropbtn">Geometry</a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="Geometry.html?scroll=1#pythagorean" onclick="offset()">Pythagorean Theorum</a>
+                        <a href="Geometry.html?scroll=1#heron" onclick="offset()">Heron's Formula</a>
+                        <a href="Geometry.html?scroll=1#surfacearea" onclick="offset()">Surface Area &amp; Volume of a Sphere</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href='Trigonometry.html' id="active" class="dropbtn">Trigonometry</a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="Trigonometry.html?scroll=1#trigonometricidentity" onclick="offset()">Famous Trigonometric Identity</a>
+                        <a href="Trigonometry.html?scroll=1#sineandcosinerule" onclick="offset()">Sine &amp; Cosine Rule</a>
+                        <a href="Trigonometry.html?scroll=1#theunitcircle" onclick="offset()">The Unit Circle</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href='Calculus.html' class="dropbtn">Calculus</a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="Calculus.html?scroll=1#differentiation" onclick="offset()">Differentiation &amp; Integration</a>
+                        <a href="Calculus.html?scroll=1#taylor" onclick="offset()">Taylor Series</a>
+                        <a href="Calculus.html?scroll=1#lhopitalsrule" onclick="offset()">L'H&ocirc;pital's Rule</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href='NumberTheory.html' class="dropbtn"><nobr>Number Theory</nobr></a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="NumberTheory.html?scroll=1#divisibilityrules" onclick="offset()">Divisibility Rules</a>
+                        <a href="NumberTheory.html?scroll=1#primenumbers" onclick="offset()">Prime Numbers</a>
+                        <a href="NumberTheory.html?scroll=1#numberofzeros" onclick="offset()">Number of Zero's</a>
+                        <a href="NumberTheory.html?scroll=1#numberoffactors" onclick="offset()">Number of Factors</a>
+                    </div>
+                </li>
+                <li><a href='Community.html'>Community</a></li>
+                <li><a href='Quizzes.html'>Quizzes</a></li>
+            </ul>
+        </div>
+        <script src="./Scripts/Scrollwheeltrack.js" defer></script>
+    </nav>
+    <div class="wrapper">
+    <aside>
+        <!--About author, Fun facts and additional knowledge -->
+        <div class="asidesection">
+            <h3 class="asideheader"><b>Author</b></h3>
+            <p>Hi there. I am a student from Sunway University and I made this website as an assignment for Web Fundamentals.
+            This is basically my <em>first time</em> coding in <code>HTML</code> language and I am still learning the basics, so 
+            if there is anything that I can improve on, <strong>be sure</strong> to give suggestions&excl; <span id="dots">...... </span>
+            </p>
+            <div id="more">
+                <p>Back when I was young, I always had a <em>massive</em> interest in Mathematics, it seemed like everything in the world
+                had to do with the laws of Mathematics. That idea intrigued me so I wanted to know more about the <em>deep</em> secrets of the universe.
+                Thanks to my mother, I always had a good number sense and it <em>tremendously</em> helped me a lot in problem solving.
+                </p>
+                <p>Mathematics is unanimously known as the <strong>most</strong> hated subject among students because of the tiring calculations. I wish
+                to change that negative perspective towards Mathematics by talking about the fun within Mathematics, which include the reasons why I 
+                love the subject.
+                </p>
+            </div>
+            <button onclick="readmore()" id="readmore-btn">Read More</button>
+        </div>
+        <script src="./Scripts/Readmore-readless.js"></script>
+        <div class="funfact">
+            <h3 class="asideheader"><b>Fun facts</b></h3>
+            <p>If you multiply 6 by an even number, the answer will end with the same digit. The number in the ten's place will be half of the number in the one's place.
+            </p>
+        </div>
+    </aside>
+    <main>
+        <!--Main text-->
+        <div>
+            <h2>Trigonometry</h2>
+            <p>This topic is known for the many <em>confusing and complicated</em> trig identities, but if you get the foundations down you will be able to 
+            understand how to solve related problems. In theory, trigonometry the branch of mathematics concerned with specific <strong>functions of angles</strong> and 
+            <strong>their application to calculations</strong>. There's not a lot of <em>very interesting</em> facts but I will connect this topic with 
+            the topics that I talked about before.
+            </p>
+            <ol>
+                <figure style="float:right">
+                    <img src='./Media/Trig1.png' alt="Trig #1" width="300" height="300"> <hr>
+                    <figcaption>Fig5.1 Famous Trigonometric Identity</figcaption>
+                </figure>
+                <li class="mainordered"><h3 id="trigonometricidentity">Famous Trigonometric Identity</h3></li>
+                <p>One of the most famous identities is definitely the sum of <var>sin<sup>2</sup>&theta;</var> and <var>cos<sup>2</sup>&theta;</var>. To the untrained eye, 
+                it seems fascinating that the sum of two trig functions equals 1. But if you incorporate the <em>Pythagorean Theorum</em>, it will become easy to understand.
+                </p>
+                <p style="clear:right">First, you can rewrite <var>a,b</var> using the sine function to get two new equations. Next, we can plug in those two variables <var>a,b</var> 
+                into the <em>Pythagorean Theorum</em>. Finally, we will get our solution to the proof after simplying the equation. Easy isn't it&excl;
+                </p>
+                <div class="fig">
+                <figure>
+                    <div class="trig"><img src='./Media/Trig2.png' alt="Trig #2" height="auto" style="max-width:400px"><img src='./Media/Trig3.png' alt="Trig #3" height="auto" style="max-width:400px"></div> <hr>
+                    <figcaption>Fig5.2 Proof of the Famous Trig Identity</figcaption>
+                </figure>
+                </div>
+                <div class="quote">
+                <blockquote><cite>
+                    "Life is a math equation. In order to gain the most, you have to know how to convert negatives into positives." <br> &mdash; Anonymous
+                </cite></blockquote>
+                </div><br>
+                <li class="mainordered"><h3 id="sineandcosinerule">Sine &amp; Cosine Rule</h3></li>
+                <p>These two are often paired together and used in many kinds of problem solving. One of the <strong>important</strong> concept I want to bring out is 
+                the conditions you need to <strong>solve</strong> a triangle. For example, you only need two lengths and the angle in between to find out <strong>all</strong> 
+                of the other missing values. This is because this triangle is unique, <strong>no other</strong> triangle will have the same measurements as this.
+                </p>
+                <p>As usual I will not show the steps to proof as it basically uses concepts that are previously taught, but you can <em>explore</em> it yourself.
+                </p>
+                <div class="fig">
+                <iframe src="http://www.eclecticon.info/index_htm_files/Trigonometry%20-%20sine%20rule%20and%20cosine%20rule.pdf" title="Sin and Cosine Rule" width="100%" height="500px"></iframe>
+                </div>
+                <p>As you can see in the examples, you can use these rules to solve problems in real-life situations&excl;</p>
+                <li class="mainordered"><h3 id="theunitcircle">The Unit Circle</h3></li>
+                <p>The unit circle is a useful tool to better visualize the <strong>relations</strong> between different trig functions. In simple words, it is a circle with radius 1 
+                in the <em>Cartesian plane</em> where the center is at <var>(0,0)</var>. Firstly, it is another visual proof for the 
+                <em>Pythagorean Theorum</em>. Each coordinate in the circle represents values for the base and height of the triangle formed as shown in the <em>figure</em>.
+                </p>
+                <figure>
+                    <img src='./Media/UnitCircle.png' alt="Unit Circle" width="450" height="auto"> <hr>
+                    <figcaption>Fig5.3 Pythagorean Theorum in Unit Circle</figcaption>
+                </figure>
+                <p>Secondly, you can see how the angle effects the value of the sine, cosine and tangent function. For example, you can find out whether the trig function 
+                is <strong>positive or negative</strong> in each <em>quadrant</em>. You can also see how all the values change. Here is a little video showcasing it&excl;
+                </p>
+                <div class="fig">
+                <figure class="specialfixedwidth">
+                    <video width="100%" height="auto" autoplay loop controls>
+                        <source src='./Media/Assignment.webm' type="video/webm">
+                    </video> <hr>
+                    <figcaption>Fig5.4 Values of Trig Functions</figcaption>
+                </figure>
+                </div>
+            </ol>
+        </div>
+        <a href='Trigonometry.html'><button type="button" class="backtotopbutton">Back to Top</button></a>
+    </main>
+    </div>
+    <footer>
+        <!--Sources, credits and copyright-->
+        <table class="footertable">
+            <tr>
+                <td class="footersection">
+                    <h3>Contact me</h3><br>
+                    <a href='https://www.facebook.com/profile.php?id=100005811885824' target="_blank"><img src='./Media/Facebook.png' alt="Facebook" width="50" height="50"  class="footerimg" title="Facebook"></a>
+                    <a href="https://www.instagram.com/brianlee305/?hl=en" target="_blank"><img src='./Media/Instagram.png' alt='Instagram' width="50" height="50" class="footerimg" title="Instagram"></a>
+                    <a href="https://twitter.com/sSuperRr1" target="_blank"><img src='./Media/Twitter.png' alt="Twitter" width="50" height="50" class="footerimg" title="Twitter"></a>
+                    <a href="https://www.youtube.com/channel/UCMUdpRzituT42vZZEcRmmZA" target="_blank"><img src='./Media/Youtube.png' alt="Youtube" width="50" height="50" class="footerimg" title="Youtube"></a>
+                </td>
+                <td class="footersection">
+                    <h3>Or email me </h3><br>
+                    <a href="mailto:minecraft2013brian@gmail.com" class="footertext"><b id="emailme">here</b></a>
+                </td>
+                <td class="footersection">
+                    <h3>Sources used:</h3>
+                    <cite><ol>
+                        <li>Mathsisfun.com (2020). <a href="https://www.mathsisfun.com/geometry/unit-circle.html" target="_blank" class="footertext">Unit Circle</a></li>
+                        <li>George C. (2017). <a href="https://socratic.org/questions/58a20042b72cff17846a6feb" target="_blank" class="footertext">Proof of Trig Identity</a></li>
+                    </ol></cite>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <h4>Disclaimer:</h4>
+                    Information included in this website may or may not be accurate as the information listed is what the author intepreted from multiple sources and websites. 
+                    User dicretion is adviced. <br><br>
+                    <small>&copy; Copyright 2022 The Fun In Mathematics. All rights reserved.</small>
+                </td>
+            </tr>
+        </table>
+    </footer>
+</body>
+</html>

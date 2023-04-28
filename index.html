@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The Fun in Mathematics</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./External CSS/external_css.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./Favicon/favicon-16x16.png">
+    <link rel="manifest" href="./Favicon/site.webmanifest">
+</head>
+<body>
+    <div class="account">
+        <div><button id="login">Login</button></div>
+        <div><button id="signup">Signup</button></div>
+        <div id="welcome"></div><div class="pop" onmouseleave="leavepopup()"><a href="./Account.html"><button id="loginusername"></button></a><span class="popuptext" id="popupmsg">View Account</span></div>
+        <div><a href="./index.html"><button id="logout" onclick="logout()">Logout</button></a></div>
+    </div>
+    <div class="popup" id="popup">
+        <div class="close-btn">&times;</div>
+        <div class="form">
+            <h2>Log In</h2>
+            <div class="formheight">
+                <div class="form-element">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-element">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" placeholder="Enter your password" required>
+                </div>
+                <!-- <div class="form-element">
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me">Remember me</label>
+                </div> -->
+            </div>
+            <div>
+                <div class="form-element">
+                    <div id="login-message">
+
+                    </div>
+                    <button onclick="loginfromlogin()" id="signinbutton">Sign in</button>
+                </div>
+                <div class="form-element">
+                    <a href="javascript:void(0)">Forgot password?</a>
+                </div>
+                <div class="form-element">
+                    <a href="javascript:void(0)" id="signuptext">Don't have an account? Sign up here.</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="signuppopup">
+        <div class="close-btn">&times;</div>
+        <div class="form">
+            <h2>Sign up</h2>
+            <div class="formheight">
+                <div class="form-element">
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" placeholder="Enter your first name" required>
+                </div>
+                <div class="form-element">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastname" placeholder="Enter your last name" required>
+                </div>
+                <div class="form-element">
+                    <label for="username">User Name</label>
+                    <input type="text" id="username" placeholder="Enter your user name" required>
+                </div>
+                <div class="form-element">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-element">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" placeholder="Enter your password" required>
+                </div>
+                <div class="form-element">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+                </div>
+            </div>
+            <div class="form-element">
+                <div id="error-message">
+                    
+                </div>
+                <button onclick="loginfromsignup()" id="signupbutton">Sign up</button>
+            </div>
+        </div>
+    </div>
+    <script src="./Scripts/loginsignup.js"></script>
+    <script src="./Scripts/account.js"></script>
+    <header>
+        <img src="./Media/Nuvola_Math_and_Inf.png" alt="Math Symbols" width="150" height="150"> <h1>The Fun in Mathematics</h1> <img src="./Media/Nuvola_Math_and_Inf.png" alt="Math Symbols" width="150" height="150">
+    </header>
+    <nav class="sticky">
+        <div class="navigation-container">
+            <ul id="navscroll" onscroll="scrolltrack()">
+                <li class="dropdown">
+                    <a href='index.html' id="active" class="dropbtn">Home</a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="index.html?scroll=1#backstory" onclick="offset()">Backstory</a>
+                        <a href="index.html?scroll=1#content" onclick="offset()">Content</a>
+                        <a href="index.html?scroll=1#purpose" onclick="offset()">Purpose</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href='History.html' class="dropbtn">History</a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="History.html?scroll=1#prehistoricmaths" onclick="offset()">Prehistoric Maths</a>
+                        <a href="History.html?scroll=1#midcenturymaths" onclick="offset()">Mid Century Maths</a>
+                        <a href="History.html?scroll=1#16thcenturymaths" onclick="offset()">16th Century Onwards Mathematics</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href='Algebra.html' class="dropbtn">Algebra</a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="Algebra.html?scroll=1#quadraticformula" onclick="offset()">Quadratic Formula</a>
+                        <a href="Algebra.html?scroll=1#eulersidentity" onclick="offset()">Euler's Identity</a>
+                        <a href="Algebra.html?scroll=1#fundamentalalgebra" onclick="offset()">Fundamental Theorum of Algebra</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href='Geometry.html' class="dropbtn">Geometry</a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="Geometry.html?scroll=1#pythagorean" onclick="offset()">Pythagorean Theorum</a>
+                        <a href="Geometry.html?scroll=1#heron" onclick="offset()">Heron's Formula</a>
+                        <a href="Geometry.html?scroll=1#surfacearea" onclick="offset()">Surface Area &amp; Volume of a Sphere</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href='Trigonometry.html' class="dropbtn">Trigonometry</a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="Trigonometry.html?scroll=1#trigonometricidentity" onclick="offset()">Famous Trigonometric Identity</a>
+                        <a href="Trigonometry.html?scroll=1#sineandcosinerule" onclick="offset()">Sine &amp; Cosine Rule</a>
+                        <a href="Trigonometry.html?scroll=1#theunitcircle" onclick="offset()">The Unit Circle</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href='Calculus.html' class="dropbtn">Calculus</a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="Calculus.html?scroll=1#differentiation" onclick="offset()">Differentiation &amp; Integration</a>
+                        <a href="Calculus.html?scroll=1#taylor" onclick="offset()">Taylor Series</a>
+                        <a href="Calculus.html?scroll=1#lhopitalsrule" onclick="offset()">L'H&ocirc;pital's Rule</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href='NumberTheory.html' class="dropbtn"><nobr>Number Theory</nobr></a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="NumberTheory.html?scroll=1#divisibilityrules" onclick="offset()">Divisibility Rules</a>
+                        <a href="NumberTheory.html?scroll=1#primenumbers" onclick="offset()">Prime Numbers</a>
+                        <a href="NumberTheory.html?scroll=1#numberofzeros" onclick="offset()">Number of Zero's</a>
+                        <a href="NumberTheory.html?scroll=1#numberoffactors" onclick="offset()">Number of Factors</a>
+                    </div>
+                </li>
+                <li><a href='Community.html'>Community</a></li>
+                <li><a href='Quizzes.html'>Quizzes</a></li>
+            </ul> 
+        </div> 
+    </nav>
+    <script src="./Scripts/Scrollwheeltrack.js" defer></script>
+    <div class="wrapper">
+    <aside>
+        <!--About author, Fun facts and additional knowledge -->
+        <div class="asidesection">
+            <h3 class="asideheader"><b>Author</b></h3>
+            <p>Hi there. I am a student from Sunway University and I made this website as an assignment for Web Fundamentals.
+            This is basically my <em>first time</em> coding in <code>HTML</code> language and I am still learning the basics, so 
+            if there is anything that I can improve on, <strong>be sure</strong> to give suggestions&excl; <span id="dots">...... </span>
+            </p>
+            <div id="more">
+                <p>Back when I was young, I always had a <em>massive</em> interest in Mathematics, it seemed like everything in the world
+                had to do with the laws of Mathematics. That idea intrigued me so I wanted to know more about the <em>deep</em> secrets of the universe.
+                Thanks to my mother, I always had a good number sense and it <em>tremendously</em> helped me a lot in problem solving.
+                </p>
+                <p>Mathematics is unanimously known as the <strong>most</strong> hated subject among students because of the tiring calculations. I wish
+                to change that negative perspective towards Mathematics by talking about the fun within Mathematics, which include the reasons why I 
+                love the subject.
+                </p>
+            </div>
+            <button onclick="readmore()" id="readmore-btn">Read More</button>
+        </div>
+        <script src="./Scripts/Readmore-readless.js"></script>
+        <div class="funfact">
+            <h3 class="asideheader"><b>Fun facts</b></h3>
+            <p>Did you know that every odd number has an 'e' in it? The more you know&excl;
+            </p>
+        </div>
+    </aside>
+    <main>
+        <!--Main text-->
+        <div>
+            <h2 title="Surprise, you found me! The first easter egg." id="backstory">Backstory</h2>
+            <p>Probably one question comes to mind when it comes to this: <em>What is Mathematics?</em> Mathematics is the science that deals with the logic 
+            of shape, quantity and arrangement. In other words, we can explain most if not all of the phenomenon in this world using mathematics. In the most 
+            basic terms, we start by discovering and proving axioms, then we use previously known results to proof it, the result of a proof is called a theorum.
+            </p>
+            <p>It may seem like the subject is just full of formulas and rigorous steps to remember, but if you understand the problem and know the logic
+            behind it, it will become second nature. This is why mathematics trains your logic and deducing skills.
+            </p>
+        </div>
+        <div class="quote">
+            <blockquote><cite>
+                "Mathematics as an expression of the human mind reflects the active will, the contemplative reason, and the desire for aesthetic perfection. 
+                Its basic elements are logic and intuition, analysis and construction, generality and individuality."<br> &mdash; Richard Courant, German-American mathematician
+            </cite></blockquote>
+        </div>
+        <div>
+            <figure style="float:right;">
+                <a href='https://www.youtube.com/watch?v=OmJ-4B-mS-Y' target="_blank"><img src="./Media/MapOfMathematics.png" alt="Map Of Mathematics" width="100%" height="auto"></a> <hr>
+                <figcaption><a href='https://www.youtube.com/watch?v=OmJ-4B-mS-Y' target="_blank" class="maintexthover">Fig1.1 The Field of Mathematics</a></figcaption>
+            </figure>
+        </div>
+        <div> <br>
+            <h2 id="content">Content</h2>
+            <p>There are too many fields in the map of mathematics, so I will only cover the more basic topics. If you have interest to know more about it, you can 
+            <em>click on the figure</em>. Also, I will <strong>emphasize</strong> on the interesting parts, such as the visualization, how different topics link with each 
+            other, mind-blowing equations and so on.
+            </p>
+        </div>
+        <div style="clear:right"> <br>
+            <h2 id="purpose">Purpose</h2>
+            <p>The main purpose of this website is <strong>not</strong> to teach you mathematics, it is to make you <strong>gain interest</strong> in mathematics. 
+            I hope that by the end of the website you will understand why I like this subject and gain problem solving skills. Additionally, here are some 
+            simple math problems the world has not solved that you can think about:
+            </p>
+            <ul class="homeul">
+                <li class="homeli">
+                    <figure>
+                        <a href="https://www.quantamagazine.org/why-mathematicians-still-cant-solve-the-collatz-conjecture-20200922/#:~:text=The%20Collatz%20conjecture%20states%20that,can%20start%20around%20300%20quintillion." target="_blank">
+                        <img src='./Media/Collatz.png' alt="Collatz Conjecture" width="100%" height="auto">
+                        </a><hr>
+                        <figcaption><a href="https://www.quantamagazine.org/why-mathematicians-still-cant-solve-the-collatz-conjecture-20200922/#:~:text=The%20Collatz%20conjecture%20states%20that,can%20start%20around%20300%20quintillion." target="_blank" class="maintexthover">Fig1.2 Collatz Conjecture</a></figcaption>
+                    </figure>
+                </li>
+                <li class="homeli">
+                    <figure>
+                        <a href="https://www.math.ucdavis.edu/~romik/movingsofa/" target="_blank"><img src='./Media/Sofa.png' alt="Moving Sofa Problem" width="100%" height="auto"></a> <hr>
+                        <figcaption><a href="https://www.math.ucdavis.edu/~romik/movingsofa/" target="_blank" class="maintexthover">Fig1.3 Moving Sofa Problem</a></figcaption>
+                    </figure>
+                </li>
+                <li class="homeli">
+                    <figure>
+                        <a href="https://interestingengineering.com/two-mathematicians-crack-age-old-geometry-problem-in-quarantine" target="_blank"><img src='./Media/Inscribed.png' alt="Insribed Square Problem" width="100%" height="auto"></a> <hr>
+                        <figcaption><a href="https://interestingengineering.com/two-mathematicians-crack-age-old-geometry-problem-in-quarantine" target="_blank" class="maintexthover">Fig1.4 Inscribed Square Problem</a></figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </div>
+        <a href='index.html'><button type="button" class="backtotopbutton">Back to Top</button></a>
+    </main>
+    </div>
+    <footer>
+        <!--Sources, credits and copyright-->
+        <table class="footertable">
+            <tr>
+                <td class="footersection">
+                    <h3>Contact me</h3><br>
+                    <a href='https://www.facebook.com/profile.php?id=100005811885824' target="_blank"><img src='./Media/Facebook.png' alt="Facebook" width="50" height="50"  class="footerimg" title="Facebook"></a>
+                    <a href="https://www.instagram.com/brianlee305/?hl=en" target="_blank"><img src='./Media/Instagram.png' alt='Instagram' width="50" height="50" class="footerimg" title="Instagram"></a>
+                    <a href="https://twitter.com/sSuperRr1" target="_blank"><img src='./Media/Twitter.png' alt="Twitter" width="50" height="50" class="footerimg" title="Twitter"></a>
+                    <a href="https://www.youtube.com/channel/UCMUdpRzituT42vZZEcRmmZA" target="_blank"><img src='./Media/Youtube.png' alt="Youtube" width="50" height="50" class="footerimg" title="Youtube"></a>
+                </td>
+                <td class="footersection">
+                    <h3>Or email me </h3><br>
+                    <a href="mailto:minecraft2013brian@gmail.com" class="footertext"><b id="emailme">here</b></a>
+                </td>
+                <td class="footersection">
+                    <h3>Sources used:</h3>
+                    <cite><ol>
+                        <li>Elaine J. Hom, Jonathan Gordon (2021). <a href='https://www.livescience.com/38936-mathematics.html' target="_blank" class="footertext">What is mathematics?</a></li>
+                        <li>Team Leverage Edu (2021). <a href='https://leverageedu.com/blog/branches-of-mathematics/' target="_blank" class="footertext">Different Branches of Mathematics</a></li>
+                        <li>Wikipedia. <a href='https://en.wikipedia.org/wiki/Mathematics' target="_blank" class="footertext">Mathematics</a></li>
+                        <li>Avery Thompson (2016). <a href='https://www.popularmechanics.com/science/g2816/5-simple-math-problems/' target="_blank" class="footertext">5 Simple Math Problems</a></li>
+                    </ol></cite>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <h4>Disclaimer:</h4>
+                    Information included in this website may or may not be accurate as the information listed is what the author intepreted from multiple sources and websites. 
+                    User dicretion is adviced. <br><br>
+                    <small>&copy; Copyright 2022 The Fun In Mathematics. All rights reserved.</small>
+                </td>
+            </tr>
+        </table>
+    </footer>
+</body>
+</html>

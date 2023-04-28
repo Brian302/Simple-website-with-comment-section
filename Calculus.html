@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The Fun in Mathematics</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./External CSS/external_css.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./Favicon/favicon-16x16.png">
+    <link rel="manifest" href="./Favicon/site.webmanifest">
+</head>
+<body>
+    <div class="account">
+        <div><button id="login">Login</button></div>
+        <div><button id="signup">Signup</button></div>
+        <div id="welcome"></div><div class="pop" onmouseleave="leavepopup()"><a href="./Account.html"><button id="loginusername"></button></a><span class="popuptext" id="popupmsg">View Account</span></div>
+        <div><a href="./index.html"><button id="logout" onclick="logout()">Logout</button></a></div>
+    </div>
+    <div class="popup" id="popup">
+        <div class="close-btn">&times;</div>
+        <div class="form">
+            <h2>Log In</h2>
+            <div class="formheight">
+                <div class="form-element">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-element">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" placeholder="Enter your password" required>
+                </div>
+                <!-- <div class="form-element">
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me">Remember me</label>
+                </div> -->
+            </div>
+            <div>
+                <div class="form-element">
+                    <div id="login-message">
+
+                    </div>
+                    <button onclick="loginfromlogin()" id="signinbutton">Sign in</button>
+                </div>
+                <div class="form-element">
+                    <a href="javascript:void(0)">Forgot password?</a>
+                </div>
+                <div class="form-element">
+                    <a href="javascript:void(0)" id="signuptext">Don't have an account? Sign up here.</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="signuppopup">
+        <div class="close-btn">&times;</div>
+        <div class="form">
+            <h2>Sign up</h2>
+            <div class="formheight">
+                <div class="form-element">
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" placeholder="Enter your first name" required>
+                </div>
+                <div class="form-element">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastname" placeholder="Enter your last name" required>
+                </div>
+                <div class="form-element">
+                    <label for="username">User Name</label>
+                    <input type="text" id="username" placeholder="Enter your user name" required>
+                </div>
+                <div class="form-element">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-element">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" placeholder="Enter your password" required>
+                </div>
+                <div class="form-element">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+                </div>
+            </div>
+            <div class="form-element">
+                <div id="error-message">
+                    
+                </div>
+                <button onclick="loginfromsignup()" id="signupbutton">Sign up</button>
+            </div>
+        </div>
+    </div>
+    <script src="./Scripts/loginsignup.js"></script>
+    <script src="./Scripts/account.js"></script>
+    <header>
+        <img src="./Media/Nuvola_Math_and_Inf.png" alt="Math Symbols" width="150" height="150"> <h1>The Fun in Mathematics</h1> <img src="./Media/Nuvola_Math_and_Inf.png" alt="Math Symbols" width="150" height="150">
+    </header>
+    <nav class="sticky">
+        <div class="navigation-container">
+            <ul id="navscroll" onscroll="scrolltrack()">
+                <li class="dropdown">
+                    <a href='index.html' class="dropbtn">Home</a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="index.html?scroll=1#backstory" onclick="offset()">Backstory</a>
+                        <a href="index.html?scroll=1#content" onclick="offset()">Content</a>
+                        <a href="index.html?scroll=1#purpose" onclick="offset()">Purpose</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href='History.html' class="dropbtn">History</a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="History.html?scroll=1#prehistoricmaths" onclick="offset()">Prehistoric Maths</a>
+                        <a href="History.html?scroll=1#midcenturymaths" onclick="offset()">Mid Century Maths</a>
+                        <a href="History.html?scroll=1#16thcenturymaths" onclick="offset()">16th Century Onwards Mathematics</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href='Algebra.html' class="dropbtn">Algebra</a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="Algebra.html?scroll=1#quadraticformula" onclick="offset()">Quadratic Formula</a>
+                        <a href="Algebra.html?scroll=1#eulersidentity" onclick="offset()">Euler's Identity</a>
+                        <a href="Algebra.html?scroll=1#fundamentalalgebra" onclick="offset()">Fundamental Theorum of Algebra</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href='Geometry.html' class="dropbtn">Geometry</a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="Geometry.html?scroll=1#pythagorean" onclick="offset()">Pythagorean Theorum</a>
+                        <a href="Geometry.html?scroll=1#heron" onclick="offset()">Heron's Formula</a>
+                        <a href="Geometry.html?scroll=1#surfacearea" onclick="offset()">Surface Area &amp; Volume of a Sphere</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href='Trigonometry.html' class="dropbtn">Trigonometry</a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="Trigonometry.html?scroll=1#trigonometricidentity" onclick="offset()">Famous Trigonometric Identity</a>
+                        <a href="Trigonometry.html?scroll=1#sineandcosinerule" onclick="offset()">Sine &amp; Cosine Rule</a>
+                        <a href="Trigonometry.html?scroll=1#theunitcircle" onclick="offset()">The Unit Circle</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href='Calculus.html' id="active" class="dropbtn">Calculus</a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="Calculus.html?scroll=1#differentiation" onclick="offset()">Differentiation &amp; Integration</a>
+                        <a href="Calculus.html?scroll=1#taylor" onclick="offset()">Taylor Series</a>
+                        <a href="Calculus.html?scroll=1#lhopitalsrule" onclick="offset()">L'H&ocirc;pital's Rule</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href='NumberTheory.html' class="dropbtn"><nobr>Number Theory</nobr></a>
+                    <div class="dropdown-menu" id="dropdownmenu">
+                        <a href="NumberTheory.html?scroll=1#divisibilityrules" onclick="offset()">Divisibility Rules</a>
+                        <a href="NumberTheory.html?scroll=1#primenumbers" onclick="offset()">Prime Numbers</a>
+                        <a href="NumberTheory.html?scroll=1#numberofzeros" onclick="offset()">Number of Zero's</a>
+                        <a href="NumberTheory.html?scroll=1#numberoffactors" onclick="offset()">Number of Factors</a>
+                    </div>
+                </li>
+                <li><a href='Community.html'>Community</a></li>
+                <li><a href='Quizzes.html'>Quizzes</a></li>
+            </ul>
+        </div>
+        <script src="./Scripts/Scrollwheeltrack.js" defer></script>
+    </nav>
+    <div class="wrapper">
+    <aside>
+        <!--About author, Fun facts and additional knowledge -->
+        <div class="asidesection">
+            <h3 class="asideheader"><b>Author</b></h3>
+            <p>Hi there. I am a student from Sunway University and I made this website as an assignment for Web Fundamentals.
+            This is basically my <em>first time</em> coding in <code>HTML</code> language and I am still learning the basics, so 
+            if there is anything that I can improve on, <strong>be sure</strong> to give suggestions&excl; <span id="dots">...... </span>
+            </p>
+            <div id="more">
+                <p>Back when I was young, I always had a <em>massive</em> interest in Mathematics, it seemed like everything in the world
+                had to do with the laws of Mathematics. That idea intrigued me so I wanted to know more about the <em>deep</em> secrets of the universe.
+                Thanks to my mother, I always had a good number sense and it <em>tremendously</em> helped me a lot in problem solving.
+                </p>
+                <p>Mathematics is unanimously known as the <strong>most</strong> hated subject among students because of the tiring calculations. I wish
+                to change that negative perspective towards Mathematics by talking about the fun within Mathematics, which include the reasons why I 
+                love the subject.
+                </p>
+            </div>
+            <button onclick="readmore()" id="readmore-btn">Read More</button>
+        </div>
+        <script src="./Scripts/Readmore-readless.js"></script>
+        <div class="funfact">
+            <h3 class="asideheader"><b>Fun facts</b></h3>
+            <p>Getting back to Pi, one way to remember its shortened value (3.1415926) is to count the letters in each word of the question: 'May I have a large container of coffee?'
+            </p>
+        </div>
+    </aside>
+    <main>
+        <!--Main text-->
+        <div>
+            <h2>Calculus</h2>
+            <p>This is one of the more <em>intermediate</em> subjects of mathematics, many students hate this subject because it introduces many new concepts 
+            and notations. In the majority of this topic, I will again explain some ideas <strong>geometrically</strong> to show the beauty of mathematics.
+            </p>
+            <ol>
+                <li class="mainordered"><h3 id="differentiation">Differentiation &amp; Integration</h3></li>
+                <figure style="float:left">
+                    <img src='./Media/Calculus1.png' alt="Differentiation and Integration" height="auto" style="max-width:400px"> <hr>
+                    <figcaption>Fig6.1 Differentiation and Integration</figcaption>
+                </figure>
+                <p>These two are the <strong>core</strong> ideas of calculus. In fact, they are the <strong>inverse</strong> of each other, meaning if you differentiate some 
+                expression and integrate the result, you will get back the original expression&excl; Firstly, differentiation is like finding the <Strong>instantaneous rate of change</Strong>. 
+                In a graph, it will be the <Strong>slope</Strong> at an exact point. We can picture this by finding the slope between two different points, then move those two points 
+                <strong>infinitely</strong> close together. Secondly, integration is basically finding the <strong>area</strong> under some curve. The way we do this is by <strong>slicing</strong> 
+                the area into many rectangles of width <var>&Delta;x</var>, which means <em>a change in <var>x</var></em>. If we control <var>&Delta;x</var> to be <strong>infinitely</strong> 
+                small, meaning we slice the area in <strong>infinitely</strong> many rectangles, the area will eventually approach the actual area under the curve.
+                </p>
+                <p style="clear:left">Remember the formulas for the <strong>surface area</strong> and <strong>volume</strong> of a sphere? If you were to differentiate the formula for the volume of a sphere, 
+                you will find out it is exactly the same as the formula for the surface area&excl; Imagine painting a sphere, the amount of paint used is the surface area of the sphere, 
+                which is added to the total volume of the sphere. The amount of paint acts as a <strong>rate of change</strong> to the total volume, so that is why these two formulas are related.
+                </p> <br>
+                <p>I will use the derivative of the sine function to explain how we can <strong>visualize</strong> the differentiation of a function. In simple words, imagine an angle 
+                in a unit circle, you can add <var>&Delta;&theta;</var> to indicate a small change, notice that it will cause a small change in arc length (<var>&Delta;&theta;</var>) and y (<var>&Delta;y</var>). 
+                As <var>&Delta;&theta;</var> gets <strong>infinitely</strong> smaller, the <var>&Delta;&theta;</var> will become a straight line. In the <em>figure</em>, you can see that it forms <strong>two similar triangles</strong>. 
+                Using the <em>similar triangles theorum</em>, we know that the <strong>ratio</strong> of corresponding sides will be the same. In the end, we will get the result we wanted.
+                </p>
+                <div class="fig">
+                <figure>
+                    <img src='./Media/Calculus2.png' alt="Proof1" height="auto" style="max-width:400px"><img src='./Media/Calculus3.png' alt="Proof2" height="auto" style="max-width:400px"> <hr>
+                    <figcaption>Fig6.2 Geometrical proof of differentiation</figcaption>
+                </figure>
+                </div>
+                <div class="quote">
+                <blockquote><cite>
+                    "For me, mathematics is a collection of <b>examples</b>; a theorum is a statement about a collection of <b>examples</b> and the purpose of proving theorums is to classify 
+                    and explain the <b>examples</b>." <br> &mdash;John B. Conway
+                </cite></blockquote>
+                </div><br>
+                <li class="mainordered"><h3 id="taylor">Taylor Series</h3></li>
+                <p>A Taylor Series is an expansion of some function into an <strong>infinite sum of terms</strong>, where each term has a larger exponent like <var>x, x<sup>2</sup>, x<sup>3</sup></var>, etc. 
+                In other words, we can rewrite expressions into something we can calculate easier, especially using computers. There is a lot of <em>complexity</em> so I will just explain it very briefly, 
+                the way we can <strong>approximate</strong> a function that is <strong>similar</strong> to the original function is by making sure <strong>every degree of the derivative has the same value</strong> at a certain point 
+                of a function. The more terms we add, the closer the approximation gets because all the derivatives that describes the curve match.
+                </p>
+                <p>I will not be explaining the details, but you can click on the <em>figure</em> to see the animations that explains it very well. In the <em>general formula</em>, you will see a variable called <var>a</var>, 
+                It basically means where you start the process of approximating the function, changing the value of <var>a</var> changes where the approximation is hugging the original function.
+                </p>
+                <div class="fig">
+                <figure>
+                    <a href="https://www.youtube.com/watch?v=3d6DsjIBzJ4" target="_blank"><img src='./Media/Taylor.png' alt="Taylor Series" width="300" height="auto"></a> <hr>
+                    <figcaption><a href="https://www.youtube.com/watch?v=3d6DsjIBzJ4" target="_blank" class="maintexthover">Fig6.3 Taylor Series</a></figcaption>
+                </figure>
+                </div>
+                <p>Remember <em>Euler's identity</em> I talked about previously? I mentioned that you can prove the identity using taylor series so I will share it here. First you need to know the <strong>taylor series of the 
+                function <var>e<sup>x</sup></var></strong>, then you need to plug in <var>ix</var> instead of <var>x</var>. After simplying the equation and separating it into the <em>real</em> and <em>imaginary</em> part, 
+                you will actually notice that both parts are actually the <strong>taylor series of the sin and cosine functions&excl;</strong>. In the end you will get a general formula called the <em>Euler's formula</em>.
+                </p> <br>
+                <figure style="float:left">
+                    <img src='./Media/Taylor2.png' alt="Euler's Formula Proof" width="300" height="auto"> <hr>
+                    <figcaption>Fig6.4 Proof of Euler's Formula</figcaption>
+                </figure>
+                <p><nobr>If you</nobr> plug in <var>&pi;</var>, you will get the famous <em>Euler's identity</em>. Additionally, if you were to plot every imaginary number produced by the formula in the <em>complex plane</em>, 
+                miraculously it turns out to be a <strong>circle</strong>. This explains why the motion of <strong>rotation</strong> is present in the previous proof.
+                </p>
+                <li style="clear:left" class="mainordered"><h3 id="lhopitalsrule">L'H&ocirc;pital's Rule</h3></li>
+                <p>In the world of calculus, there is a part of it where we deal with <em>limits</em>. <em>Limits</em> are basically notations to indicate what certain value a function is <strong>approaching</strong>, there are 
+                many <strong>implications and requirements</strong> for this concept to be complete but I will not explain it here. Back to the topic of L'H&ocirc;pital's Rule, it is a helpful tool we 
+                can use to find the <em>limits</em> of certain functions, when if you plug in values into the function, the result will have an <em>indeterminate form</em> like <var>0/0, &infin;/&infin;</var>, etc.
+                </p>
+                <figure>
+                    <img src='./Media/LHopitals.png' alt="L'Hopital's Rule" width="300" height="auto"> <hr>
+                    <figcaption>Fig6.5 Formula of L'H&ocirc;pital's Rule</figcaption>
+                </figure>
+                <p>The formula is basically telling us that to find the limit of some function, you can just <strong>differentiate</strong> the top and bottom functions <strong>separately</strong> to perform furthur calculations. 
+                We can understand why the formula works by <strong>visualizing</strong> it in a graph. When both the top and bottom functions equals <var>0</var>, you can imagine a small change in <var>x</var> (<var>dx</var>) at that point, 
+                it will cause a change in both the functions' values by <var>d(f(x)), d(g(x))</var>. After some simplification, you will end up with the proven formula. I highly advised you to watch 
+                the video by clicking on the <em>figure</em>, it goes into more details about <em>limits</em> as well.
+                </p>
+                <div class="fig">
+                <figure>
+                    <a href="https://www.youtube.com/watch?v=kfF40MiS7zA&t=593s" target="_blank"><img src='./Media/LHopitals2.png' alt="L'Hopital's Rule 2" width="300" height="auto"></a> <hr>
+                    <figcaption><a href="https://www.youtube.com/watch?v=kfF40MiS7zA&t=593s" target="_blank" class="maintexthover">Fig6.6 Visualization of L'H&ocirc;pital's Rule</a></figcaption>
+                </figure>
+                </div>
+                <p>There are two conditions to meet before using the formula:</p>
+                <ul>
+                    <li>For a limit approaching c, the original functions must be <strong>differentiable</strong> either side of c, but not necessarily at c.</li>
+                    <li>The limit after applying the formula must exist.</li>
+                </ul>
+            </ol>
+        </div>
+        <a href='Calculus.html'><button type="button" class="backtotopbutton">Back to Top</button></a>
+    </main>
+    </div>
+    <footer>
+        <!--Sources, credits and copyright-->
+        <table class="footertable">
+            <tr>
+                <td class="footersection">
+                    <h3>Contact me</h3><br>
+                    <a href='https://www.facebook.com/profile.php?id=100005811885824' target="_blank"><img src='./Media/Facebook.png' alt="Facebook" width="50" height="50"  class="footerimg" title="Facebook"></a>
+                    <a href="https://www.instagram.com/brianlee305/?hl=en" target="_blank"><img src='./Media/Instagram.png' alt='Instagram' width="50" height="50" class="footerimg" title="Instagram"></a>
+                    <a href="https://twitter.com/sSuperRr1" target="_blank"><img src='./Media/Twitter.png' alt="Twitter" width="50" height="50" class="footerimg" title="Twitter"></a>
+                    <a href="https://www.youtube.com/channel/UCMUdpRzituT42vZZEcRmmZA" target="_blank"><img src='./Media/Youtube.png' alt="Youtube" width="50" height="50" class="footerimg" title="Youtube"></a>
+                </td>
+                <td class="footersection">
+                    <h3>Or email me </h3><br>
+                    <a href="mailto:minecraft2013brian@gmail.com" class="footertext"><b id="emailme">here</b></a>
+                </td>
+                <td class="footersection">
+                    <h3>Sources used:</h3>
+                    <cite><ol>
+                        <li>Darren (2020). <a href='https://math.stackexchange.com/questions/2381806/surface-area-is-the-derivative-of-volume-what-is-the-derivative-of-surface-area' target="_blank" class="footertext">Surface Area and Volume of a Sphere</a></li>
+                        <li>Mathsisfun.com (2020). <a href="https://www.mathsisfun.com/algebra/taylor-series.html" target="_blank" class="footertext">Simple Explaination of Taylor Series</a></li>
+                        <li>Mathsisfun.com (2020). <a href="https://www.mathsisfun.com/calculus/integration-introduction.html" target="_blank" class="footertext">Introduction To Integration</a></li>
+                    </ol></cite>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <h4>Disclaimer:</h4>
+                    Information included in this website may or may not be accurate as the information listed is what the author intepreted from multiple sources and websites. 
+                    User dicretion is adviced. <br><br>
+                    <small>&copy; Copyright 2022 The Fun In Mathematics. All rights reserved.</small>
+                </td>
+            </tr>
+        </table>
+    </footer>
+</body>
+</html>
